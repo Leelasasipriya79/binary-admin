@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Member</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+</head>
+
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      <header id="page-topbar">
+    <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+        
+        <!-- Left: Brand -->
+        <div class="d-flex align-items-center">
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo" style="text-decoration: none; color: white; font-size: 24px; font-weight: bold;">
+               SUBHATOM
+                </a>
+            </div>
+
+            <!-- Toggle Button (Mobile only) -->
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect d-block d-md-none" id="vertical-menu-btn">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+
+        <!-- Right: Logout Icon -->
+        <div>
+            <a href="logout.html" title="Logout" style="color: white; font-size: 20px;">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+  <div class="vertical-menu">
+    <div data-simplebar class="h-100">
+      <!-- Profile Info with Dropdown -->
+<div style="background-color: #195233; padding: 16px; color: white; position: relative;">
+ 
+  <div style="font-size: 14px;">
+    Hi, <strong>SB111222</strong><br />
+    <div style="position: relative;">
+      <button onclick="toggleProfileDropdown()" style="background: none; border: none; color: white; font-weight: bold; cursor: pointer;">
+        Binary Admin <span style="font-size: 12px;">&#9662;</span>
+      </button>
+      <div id="profileDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; color: black; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 150px; z-index: 100;">
+        <a href="profile.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">👤 View Profile</a>
+        <a href="logout.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">🚪 Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+  function toggleProfileDropdown() {
+    const dropdown = document.getElementById("profileDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  // Optional: Hide dropdown on outside click
+  window.addEventListener("click", function(e) {
+    if (!e.target.closest("#profileDropdown") && !e.target.closest("button")) {
+      document.getElementById("profileDropdown").style.display = "none";
+    }
+  });
+</script>
+<div id="sidebar-menu">
+        <ul id="side-menu">
+          <li class="active">
+            <a href="index.html"><i class="fas fa-tachometer-alt me-2"></i><span>Dashboard</span></a>
+          </li>
+
+          <!-- User Management -->
+          <li>
+            <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="register-user.html">Register User</a></li>
+              <li><a href="view-user.html">View Users</a></li>
+              <li><a href="search-user.html">Search User</a></li>
+              <li><a href="activate-member.html">Activate Member</a></li>
+              <li><a href="activation-history.html">Activation History</a></li>
+              <li><a href="block-user-history.html">Block User History</a></li>
+              <li><a href="active-special.html"> Active Special </a></li>
+            </ul>
+          </li>
+
+          <!-- Team Management -->
+          <li>
+            <a href="#"><i class="fas fa-users me-2"></i>Team Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="smc-agent.html">My Referrals</a></li>
+              <li><a href="team-executive.html">My Downline</a></li>
+              <li><a href="team-senior-executive.html">Genealogy</a></li>
+              <li><a href="smc-field-officer.html">Auto Pool</a></li>
+            </ul>
+          </li>
+
+          <!-- E-Pin -->
+          <li>
+            <a href="#"><i class="fas fa-key me-2"></i>E-Pin Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="create-chits.html">Send E-Pin</a></li>
+              <li><a href="chit-amount.html">View E-Pins</a></li>
+              <li><a href="month.html">Transfer History</a></li>
+              <li><a href="monthly-investment.html">Withdraw E-Pin</a></li>
+              <li><a href="auction.html">Update Payment</a></li>
+              <li><a href="auction.html">Request History</a></li>
+            </ul>
+          </li>
+
+          <!-- KYC -->
+          <li>
+            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+          </li>
+
+          <!-- Payout -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="fund-transfer.html">Income Status</a></li>
+            </ul>
+          </li>
+
+          <!-- Bonus -->
+          <li>
+            <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="fund-transfer.html">Matching Bonus</a></li>
+              <li><a href="fund-transfer.html">Auto Pool Bonus</a></li>
+            </ul>
+          </li>
+
+          <!-- Wallet -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Wallet Statement</a></li>
+              <li><a href="kyc-pending.html">Outstanding Wallet</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li>
+            <a href="#"><i class="fas fa-cogs me-2"></i>Settings <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Notice Settings</a></li>
+            </ul>
+          </li>
+
+          <!-- Sign Out -->
+          <li>
+            <a href="#"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+<div class="main-content">
+<div class="page-content">
+  <!-- Header Section -->
+<style>
+    body{
+        background-color: black;
+        color:white;
+    }
+</style>
+
+
+  <!-- Header Section -->
+  <div style="padding: 10px 0;">
+    <h2 style="margin: 0 0 10px 0;">Block User History</h2>
+    <div style="font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 5px;">
+      <span>🏠</span>
+      <span>Member</span>
+      <span style="color: #ccc;">/</span>
+      <span style="color: white;">Block User History</span>
+    </div>
+  </div>
+
+  <!-- Table Box -->
+  <div style="background-color: white; color: black; border-radius: 10px; padding: 20px; margin-top: 20px;">
+
+    <h3 style="margin-bottom: 20px;">Block User History</h3>
+
+    <!-- Controls -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+      <div>
+        <label>Show 
+          <select style="padding: 5px 10px; margin: 0 5px; border: 1px solid #ccc; border-radius: 5px;">
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select> 
+        entries</label>
+      </div>
+      <div>
+        <label>Search: 
+          <input type="text" style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 5px;" />
+        </label>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background-color: #f1f1f1; font-weight: bold; text-align: left;">
+            <th style="padding: 10px;">#</th>
+            <th style="padding: 10px;">User ID</th>
+            <th style="padding: 10px;">Name</th>
+            <th style="padding: 10px;">Phone</th>
+            <th style="padding: 10px;">Sponser</th>
+            <th style="padding: 10px;">Status</th>
+            <th style="padding: 10px;">Joining Date</th>
+            <th style="padding: 10px;">PassKey</th>
+            <th style="padding: 10px;">Activation Date</th>
+            <th style="padding: 10px;">Action</th>
+          </tr>
+        </thead>
+       <tbody>
+  <tr>
+    <td style="padding: 10px;">1</td><td>SB981871</td><td>praveen reddy</td><td>9912345678</td><td>Binary Admin (User ID:SB111222)</td><td>Not-Active</td><td>21-11-2024 19:43:21</td><td>12345</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">2</td><td>SB806625</td><td>praveen reddy</td><td>9912345678</td><td>Binary Admin (User ID:SB111222)</td><td>Not-Active</td><td>21-11-2024 19:43:21</td><td>12345</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">3</td><td>SB818711</td><td>praveen reddy</td><td>9912345678</td><td>Binary Admin (User ID:SB111222)</td><td>Not-Active</td><td>21-11-2024 19:43:21</td><td>12345</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">4</td><td>SB308464</td><td>Fff</td><td>9865320852</td><td>Sampat (User ID:SB244431)</td><td>Not-Active</td><td>21-12-2023 17:25:21</td><td>543211</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">5</td><td>SB409675</td><td>Fff</td><td>9865320852</td><td>Sampat (User ID:SB244431)</td><td>Not-Active</td><td>21-12-2023 17:24:21</td><td>543211</td><td></td>
+   <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">6</td><td>SB244431</td><td>Sampat</td><td>9165600727</td><td>Binary Admin (User ID:SB111222)</td><td>Not-Active</td><td>04-12-2023 13:05:04</td><td>1234</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">7</td><td>SB944535</td><td>TANUJA</td><td>7302564044</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>Not-Active</td><td>11-10-2023 11:29:11</td><td>112233</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">8</td><td>SB876318</td><td>KAJAL</td><td>7302564044</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>Not-Active</td><td>11-10-2023 11:26:11</td><td>112233</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">9</td><td>SB589846</td><td>Shailesh</td><td>8218385936</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>Not-Active</td><td>28-09-2023 13:21:28</td><td>123456</td><td></td>
+    <td style="padding: 5px;">
+      <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px;">10</td><td>SB722761</td><td>Shailesh</td><td>8218385936</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>Not-Active</td><td>28-09-2023 13:19:28</td><td>123456</td><td></td>
+    <td style="padding: 5px;">
+       <button style="padding: 5px 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px; margin-right: 5px;">More</button>
+      <button style="padding: 5px 5px; background-color: #198754; color: white; border: none; border-radius: 4px; margin-right: 5px;">Dashboard</button>
+      <button style="padding: 5px 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
+    </td>
+  </tr>
+</tbody>
+
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 14px;">
+      <div>Showing 1 to 10 of 159 entries</div>
+      <div>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">Previous</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">1</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">2</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">3</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">4</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">5</button>
+        <span style="margin: 0 5px;">…</span>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">16</button>
+        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">Next</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>      
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Peity chart-->
+    <script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

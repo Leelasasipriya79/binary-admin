@@ -1,0 +1,16 @@
+
+  /* Only show toggle button on small screens */
+  @media (max-width: 768px) {
+    #vertical-menu-btn {
+      display: inline-block !important;
+      color:white;
+    }
+  }
+
+  @media (min-width: 769px) {
+    #vertical-menu-btn {
+      display: none !important;
+      color:white;
+    
+    }
+  }

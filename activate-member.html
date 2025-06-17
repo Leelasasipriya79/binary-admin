@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Member</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+</head>
+
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      <header id="page-topbar">
+    <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+        
+        <!-- Left: Brand -->
+        <div class="d-flex align-items-center">
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo" style="text-decoration: none; color: white; font-size: 24px; font-weight: bold;">
+               SUBHATOM
+                </a>
+            </div>
+
+            <!-- Toggle Button (Mobile only) -->
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect d-block d-md-none" id="vertical-menu-btn">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+
+        <!-- Right: Logout Icon -->
+        <div>
+            <a href="logout.html" title="Logout" style="color: white; font-size: 20px;">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+  <div class="vertical-menu">
+    <div data-simplebar class="h-100">
+      <!-- Profile Info with Dropdown -->
+<div style="background-color: #195233; padding: 16px; color: white; position: relative;">
+ 
+  <div style="font-size: 14px;">
+    Hi, <strong>SB111222</strong><br />
+    <div style="position: relative;">
+      <button onclick="toggleProfileDropdown()" style="background: none; border: none; color: white; font-weight: bold; cursor: pointer;">
+        Binary Admin <span style="font-size: 12px;">&#9662;</span>
+      </button>
+      <div id="profileDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; color: black; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 150px; z-index: 100;">
+        <a href="profile.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">👤 View Profile</a>
+        <a href="logout.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">🚪 Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+  function toggleProfileDropdown() {
+    const dropdown = document.getElementById("profileDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  // Optional: Hide dropdown on outside click
+  window.addEventListener("click", function(e) {
+    if (!e.target.closest("#profileDropdown") && !e.target.closest("button")) {
+      document.getElementById("profileDropdown").style.display = "none";
+    }
+  });
+</script>
+<div id="sidebar-menu">
+        <ul id="side-menu">
+          <li class="active">
+            <a href="index.html"><i class="fas fa-tachometer-alt me-2"></i><span>Dashboard</span></a>
+          </li>
+
+          <!-- User Management -->
+          <li>
+            <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="register-user.html">Register User</a></li>
+              <li><a href="view-user.html">View Users</a></li>
+              <li><a href="search-user.html">Search User</a></li>
+              <li><a href="activate-member.html">Activate Member</a></li>
+              <li><a href="activation-history.html">Activation History</a></li>
+              <li><a href="block-user-history.html">Block User History</a></li>
+              <li><a href="active-special.html"> Active Special </a></li>
+            </ul>
+          </li>
+
+          <!-- Team Management -->
+          <li>
+            <a href="#"><i class="fas fa-users me-2"></i>Team Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="smc-agent.html">My Referrals</a></li>
+              <li><a href="team-executive.html">My Downline</a></li>
+              <li><a href="team-senior-executive.html">Genealogy</a></li>
+              <li><a href="smc-field-officer.html">Auto Pool</a></li>
+            </ul>
+          </li>
+
+          <!-- E-Pin -->
+          <li>
+            <a href="#"><i class="fas fa-key me-2"></i>E-Pin Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="create-chits.html">Send E-Pin</a></li>
+              <li><a href="chit-amount.html">View E-Pins</a></li>
+              <li><a href="month.html">Transfer History</a></li>
+              <li><a href="monthly-investment.html">Withdraw E-Pin</a></li>
+              <li><a href="auction.html">Update Payment</a></li>
+              <li><a href="auction.html">Request History</a></li>
+            </ul>
+          </li>
+
+          <!-- KYC -->
+          <li>
+            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+          </li>
+
+          <!-- Payout -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="fund-transfer.html">Income Status</a></li>
+            </ul>
+          </li>
+
+          <!-- Bonus -->
+          <li>
+            <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="fund-transfer.html">Matching Bonus</a></li>
+              <li><a href="fund-transfer.html">Auto Pool Bonus</a></li>
+            </ul>
+          </li>
+
+          <!-- Wallet -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Wallet Statement</a></li>
+              <li><a href="kyc-pending.html">Outstanding Wallet</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li>
+            <a href="#"><i class="fas fa-cogs me-2"></i>Settings <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Notice Settings</a></li>
+            </ul>
+          </li>
+
+          <!-- Sign Out -->
+          <li>
+            <a href="#"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+<div class="main-content">
+<div class="page-content">
+  <!-- Header Section -->
+<style>
+    body{
+        background-color: black;
+        color:white;
+    }
+</style>
+
+  <div style="padding: 10px 0;">
+    <h2 style="margin: 0 0 10px 0;">Activate Member</h2>
+    <div style="font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 5px;">
+      <span style="color: #0d6efd;">🏠</span>
+      <span>Member</span>
+      <span style="color: #ccc;">/</span>
+      <span style="color: white;">Activate Member</span>
+    </div>
+  </div>
+
+  <!-- Form Card -->
+  <div style="background-color: white; border-radius: 10px; padding: 30px 20px; color: black; max-width: 500px;">
+
+    <h3 style="margin-bottom: 20px;">Activate Member</h3>
+
+    <!-- User ID -->
+    <div style="margin-bottom: 15px;">
+      <label for="userId" style="display: block; font-weight: bold; margin-bottom: 5px;">User ID *</label>
+      <input 
+        type="text" 
+        id="userId" 
+        placeholder="e.g. john12345"
+        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+      />
+    </div>
+
+    <!-- Name -->
+    <div style="margin-bottom: 15px;">
+      <label for="name" style="display: block; font-weight: bold; margin-bottom: 5px;">Name *</label>
+      <input 
+        type="text" 
+        id="name" 
+        placeholder="e.g. John Doe" 
+        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #e9ecef;"
+        readonly
+      />
+    </div>
+
+    <!-- Activation Pin -->
+    <div style="margin-bottom: 25px;">
+      <label for="pin" style="display: block; font-weight: bold; margin-bottom: 5px;">Activation Pin *</label>
+      <input 
+        type="text" 
+        id="pin" 
+        placeholder="e.g. XXXXXXXXXXXXXXXXXXX" 
+        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+      />
+    </div>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 10px;">
+      <button 
+        style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      >
+        Active Now
+      </button>
+      <button 
+        style="padding: 10px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;"
+      >
+        Reset
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>      
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Peity chart-->
+    <script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
