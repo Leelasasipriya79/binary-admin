@@ -1,0 +1,824 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  <title> Activate Member</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/style.min.css" rel="stylesheet" />
+    <link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+    <link href="assets/css/custom/bineryTooltip.css" rel="stylesheet" />
+</head>
+    <style>
+    .red-border {
+        box-shadow: 0 0 0 2px #f44242;
+    }
+
+    .orange-border {
+        box-shadow: 0 0 0 2px #f49b41;
+    }
+
+    .yellow_border {
+        box-shadow: 0 0 0 2px #f4df41;
+    }
+
+    .blue_border {
+        box-shadow: 0 0 0 2px #4167f4;
+    }
+
+    .sky_border {
+        box-shadow: 0 0 0 2px #41f4e5;
+    }
+
+    .green_border {
+        box-shadow: 0 0 0 2px #67f441;
+    }
+
+    .gray_border {
+        box-shadow: 0 0 0 2px #ccc5c1;
+    }
+    </style>
+   
+
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+  
+      <header id="page-topbar">
+    <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+        
+        <!-- Left: Brand -->
+        <div class="d-flex align-items-center">
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo" style="text-decoration: none; color: white; font-size: 24px; font-weight: bold;">
+               SUBHATOM
+                </a>
+            </div>
+
+            <!-- Toggle Button (Mobile only) -->
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect d-block d-md-none" id="vertical-menu-btn">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+
+        <!-- Right: Logout Icon -->
+        <div>
+            <a href="logout.html" title="Logout" style="color: white; font-size: 20px;">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </div>
+</header>
+       
+  
+
+
+  <div class="vertical-menu">
+    <div data-simplebar class="h-100">
+      <!-- Profile Info with Dropdown -->
+<div style="background-color: #195233; padding: 16px; color: white; position: relative;">
+ 
+  <div style="font-size: 14px;">
+    Hi, <strong>SB111222</strong><br />
+    <div style="position: relative;">
+      <button onclick="toggleProfileDropdown()" style="background: none; border: none; color: white; font-weight: bold; cursor: pointer;">
+        Binary Admin <span style="font-size: 12px;">&#9662;</span>
+      </button>
+      <div id="profileDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; color: black; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 150px; z-index: 100;">
+        <a href="profile.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">👤 View Profile</a>
+        <a href="logout.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">🚪 Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+  function toggleProfileDropdown() {
+    const dropdown = document.getElementById("profileDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  // Optional: Hide dropdown on outside click
+  window.addEventListener("click", function(e) {
+    if (!e.target.closest("#profileDropdown") && !e.target.closest("button")) {
+      document.getElementById("profileDropdown").style.display = "none";
+    }
+  });
+</script>
+<div id="sidebar-menu">
+        <ul id="side-menu">
+          <li class="active">
+            <a href="index.html"><i class="fas fa-tachometer-alt me-2"></i><span>Dashboard</span></a>
+          </li>
+
+          <!-- User Management -->
+          <li>
+            <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="register-user.html">Register User</a></li>
+              <li><a href="view-user.html">View User</a></li>
+            
+              <li><a href="activate-member.html">Activate Member</a></li>
+              <li><a href="activation-history.html">Activation History</a></li>
+              <li><a href="block-user-history.html">Block User History</a></li>
+             
+            </ul>
+          </li>
+
+          <!-- Team Management -->
+          <li>
+            <a href="#"><i class="fas fa-users me-2"></i>Team Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="my-referral.html">My Referral</a></li>
+              <li><a href="my-downline.html">My Downline</a></li>
+              <li><a href="team-senior-executive.html">Genealogy Tree</a></li>
+          
+            </ul>
+          </li>
+
+          <!-- E-Pin -->
+          <li>
+            <a href="#"><i class="fas fa-key me-2"></i>E-Pin Management <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="create-chits.html">Send E-Pin</a></li>
+              <li><a href="chit-amount.html">View E-Pins</a></li>
+              <li><a href="month.html">Transfer History</a></li>
+              <li><a href="monthly-investment.html">Withdraw E-Pin</a></li>
+              <li><a href="auction.html">Update Payment</a></li>
+              <li><a href="auction.html">Request History</a></li>
+            </ul>
+          </li>
+
+          <!-- KYC -->
+          <li>
+            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+          </li>
+
+          <!-- Payout -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
+            <ul class="submenu">
+             <li><a href="income-payout.html">Income payout Status</a></li>
+            </ul>
+          </li>
+
+          <!-- Bonus -->
+          <li>
+            <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
+            <ul class="submenu">
+               <li><a href="matching-income.html">Matching Income</a></li>
+            </ul>
+          </li>
+
+          <!-- Wallet -->
+          <li>
+            <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Wallet Statement</a></li>
+              <li><a href="kyc-pending.html">Outstanding Wallet</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li>
+            <a href="#"><i class="fas fa-cogs me-2"></i>Settings <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="kyc-pending.html">Notice Settings</a></li>
+            </ul>
+          </li>
+
+          <!-- Sign Out -->
+          <li>
+            <a href="#"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
+  <div class="page-content">
+     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2 style="margin: 0; color:white;">My Tree</h2>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div style="color: white; margin-bottom: 20px;">
+      <span style="margin-right: 5px;">🏠</span> / <span>Team</span> / <strong style="color: white;">My Tree</strong>
+    </div>
+
+    <!-- Input Group -->
+    <div style="background: white; color: black; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+      <div style="display: flex; gap: 10px;">
+        <input type="text" style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" value="SB111222" />
+        <button style="padding: 8px 12px; background-color: #2563eb; color: white; border: none; border-radius: 4px;">Search</button>
+      </div>
+    </div>
+    <div style="width: 1200px">
+    <div class="panel panel-inverse">
+        <div class="panel-body">
+            <div id="transformIt" style="padding: 20px;">
+                <!-- Binery Tree will Be Here -->
+                                <div class="binery-background">
+                    <div style="width: 80px; height: 120px; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                        <!-- Binary TOOLTIP -->
+                        <div class="binery-tooltip">
+                            <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                <div class="gritter-top"></div>
+                                <div class="gritter-item">
+                                    <div class="gritter-with-image">
+                                        <span class="gritter-title">
+                                            Binary Admin</span>
+                                        <p>User Id:
+                                            SB111222<br />
+                                            Sponser Id:
+                                            <br />
+                                            Joining Date:
+                                            2022-08-22 13:36:59<br />
+                                            Activation Date:
+                                            2022-08-22 18:36:59<br />
+                                            Account Status :
+                                            Active<br />
+                                            Active Team: 30 ( L ) - 7 ( R ) <br>In-Active Team: 113 ( L ) - 3 ( R ) <br>                                        </p>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="gritter-bottom">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //BINARY TOOLTIP -->
+                        <img src='assets/images/silver.png' class="img-circle img-responsive">
+                        <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB111222">
+                                Binary Admin</a></h4>
+                    </div>
+                </div>
+                                <!-- Child Level 1 -->
+                <div>
+                                        <div class="col-xs-6 binery-background ">
+                        <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                            <!-- Binary TOOLTIP -->
+                            <div class="binery-tooltip">
+                                <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                    <div class="gritter-top"></div>
+                                    <div class="gritter-item">
+                                        <div class="gritter-with-image">
+                                            <span class="gritter-title">
+                                                Zanthium Technosoft</span>
+                                            <p>User Id:
+                                                SB307357<br />
+                                                Sponser Id:
+                                                SB111222<br />
+                                                Joining Date:
+                                                2022-09-30 14:50:49<br />
+                                                Activation Date:
+                                                2022-09-30 15:36:22<br />
+                                                Account Status :
+                                                Active<br />
+                                                Active Team: 16 ( L ) - 13 ( R ) <br>In-Active Team: 96 ( L ) - 17 ( R ) <br>                                            </p>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                    <div class="gritter-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //BINARY TOOLTIP -->
+                            <img src='assets/images/silver.png' class="img-circle img-responsive">
+                            <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB307357">
+                                    Zanthium Technosoft</a></h4>
+                        </div>
+                    </div>
+                                                            <div class="col-xs-6 binery-background ">
+                        <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                            <!-- Binary TOOLTIP -->
+                            <div class="binery-tooltip">
+                                <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                    <div class="gritter-top"></div>
+                                    <div class="gritter-item">
+                                        <div class="gritter-with-image">
+                                            <span class="gritter-title">
+                                                ROOT 2</span>
+                                            <p>User Id:
+                                                SB517350<br />
+                                                Sponser Id:
+                                                SB111222<br />
+                                                Joining Date:
+                                                2022-09-30 15:17:08<br />
+                                                Activation Date:
+                                                2022-09-30 15:39:54<br />
+                                                Account Status :
+                                                Active<br />
+                                                Active Team: 3 ( L ) - 3 ( R ) <br>In-Active Team: 0 ( L ) - 3 ( R ) <br>                                            </p>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                    <div class="gritter-bottom">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //BINARY TOOLTIP -->
+                            <img src='assets/images/silver.png' class="img-circle img-responsive">
+                            <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB517350">
+                                    ROOT 2</a></h4>
+                        </div>
+                    </div>
+                                        <div class="clearfix"></div>
+                </div>
+                <!--//Child Level 1 -->
+                <!-- Child Level 2 -->
+                <div>
+                    <div class="col-xs-6">
+                                                <div class="col-xs-6 binery-background ">
+                            <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                <!-- Binary TOOLTIP -->
+                                <div class="binery-tooltip">
+                                    <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                        <div class="gritter-top"></div>
+                                        <div class="gritter-item">
+                                            <div class="gritter-with-image">
+                                                <span class="gritter-title">
+                                                    ADMIN</span>
+                                                <p>User Id:
+                                                    SB336535<br />
+                                                    Sponser Id:
+                                                    SB307357<br />
+                                                    Joining Date:
+                                                    2022-09-30 15:26:17<br />
+                                                    Activation Date:
+                                                    2022-09-30 15:40:30<br />
+                                                    Account Status :
+                                                    Active<br />
+                                                    Active Team: 14 ( L ) - 1 ( R ) <br>In-Active Team: 96 ( L ) - 0 ( R ) <br>                                                </p>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div class="gritter-bottom">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //BINARY TOOLTIP -->
+                                <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB336535">
+                                        ADMIN</a></h4>
+                            </div>
+                        </div>
+                                                                        <div class="col-xs-6 binery-background ">
+                            <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                <!-- Binary TOOLTIP -->
+                                <div class="binery-tooltip">
+                                    <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                        <div class="gritter-top"></div>
+                                        <div class="gritter-item">
+                                            <div class="gritter-with-image">
+                                                <span class="gritter-title">
+                                                    ADMIN</span>
+                                                <p>User Id:
+                                                    SB710614<br />
+                                                    Sponser Id:
+                                                    SB307357<br />
+                                                    Joining Date:
+                                                    2022-09-30 15:26:49<br />
+                                                    Activation Date:
+                                                    2022-09-30 15:41:07<br />
+                                                    Account Status :
+                                                    Active<br />
+                                                    Active Team: 1 ( L ) - 11 ( R ) <br>In-Active Team: 0 ( L ) - 17 ( R ) <br>                                                </p>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div class="gritter-bottom">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //BINARY TOOLTIP -->
+                                <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB710614">
+                                        ADMIN</a></h4>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>
+                    </div>
+                    <div class="col-xs-6">
+                                                <div class="col-xs-6 binery-background ">
+                            <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                <!-- Binary TOOLTIP -->
+                                <div class="binery-tooltip">
+                                    <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                        <div class="gritter-top"></div>
+                                        <div class="gritter-item">
+                                            <div class="gritter-with-image">
+                                                <span class="gritter-title">
+                                                    ADMIN</span>
+                                                <p>User Id:
+                                                    SB533597<br />
+                                                    Sponser Id:
+                                                    SB517350<br />
+                                                    Joining Date:
+                                                    2022-09-30 15:27:33<br />
+                                                    Activation Date:
+                                                    2022-09-30 15:41:53<br />
+                                                    Account Status :
+                                                    Active<br />
+                                                    Active Team: 1 ( L ) - 1 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                </p>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div class="gritter-bottom">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //BINARY TOOLTIP -->
+                                <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB533597">
+                                        ADMIN</a></h4>
+                            </div>
+                        </div>
+                                                                        <div class="col-xs-6 binery-background ">
+                            <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                <!-- Binary TOOLTIP -->
+                                <div class="binery-tooltip">
+                                    <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                        <div class="gritter-top"></div>
+                                        <div class="gritter-item">
+                                            <div class="gritter-with-image">
+                                                <span class="gritter-title">
+                                                    ADMIN</span>
+                                                <p>User Id:
+                                                    SB330633<br />
+                                                    Sponser Id:
+                                                    SB517350<br />
+                                                    Joining Date:
+                                                    2022-09-30 15:27:18<br />
+                                                    Activation Date:
+                                                    2022-09-30 15:43:34<br />
+                                                    Account Status :
+                                                    Active<br />
+                                                    Active Team: 1 ( L ) - 1 ( R ) <br>In-Active Team: 0 ( L ) - 3 ( R ) <br>                                                </p>
+                                            </div>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        <div class="gritter-bottom">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //BINARY TOOLTIP -->
+                                <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB330633">
+                                        ADMIN</a></h4>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--//Child Level 2 -->
+                <!-- Child Level 3 -->
+                <div>
+                    <div class="col-xs-6">
+                        <div class="col-xs-6">
+                                                        <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB726840<br />
+                                                        Sponser Id:
+                                                        SB336535<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:29:20<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:31:31<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 13 ( L ) - 0 ( R ) <br>In-Active Team: 96 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB726840">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                                                    <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB549563<br />
+                                                        Sponser Id:
+                                                        SB336535<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:29:38<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:32:04<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB549563">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                        <div class="clearfix"></div>
+                        </div>
+                        <div class="col-xs-6">
+                                                        <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB191894<br />
+                                                        Sponser Id:
+                                                        SB710614<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:30:18<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:32:35<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB191894">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                                                    <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB686572<br />
+                                                        Sponser Id:
+                                                        SB710614<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:30:48<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:33:06<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 10 ( R ) <br>In-Active Team: 0 ( L ) - 17 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB686572">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="col-xs-6">
+                                                        <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB873763<br />
+                                                        Sponser Id:
+                                                        SB533597<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:31:19<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:34:19<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB873763">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                                                    <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB264227<br />
+                                                        Sponser Id:
+                                                        SB533597<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:31:57<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:35:22<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB264227">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                        <div class="clearfix"></div>
+                        </div>
+                        <div class="col-xs-6">
+                                                        <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB394348<br />
+                                                        Sponser Id:
+                                                        SB330633<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:32:23<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:35:44<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 0 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB394348">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                                                    <div class="col-xs-6  ">
+                                <div style="width: 80px; height: auto; position : relative;background-color: transparent;margin-top: 10px;" class="center-block binary-item">
+                                    <!-- Binary TOOLTIP -->
+                                    <div class="binery-tooltip">
+                                        <div id="gritter-item-1" class="gritter-item-wrapper my-sticky-class" role="alert">
+                                            <div class="gritter-top"></div>
+                                            <div class="gritter-item">
+                                                <div class="gritter-with-image">
+                                                    <span class="gritter-title">
+                                                        ADMIN</span>
+                                                    <p>User Id:
+                                                        SB549525<br />
+                                                        Sponser Id:
+                                                        SB330633<br />
+                                                        Joining Date:
+                                                        2022-09-30 15:32:56<br />
+                                                        Activation Date:
+                                                        2022-09-30 16:36:03<br />
+                                                        Account Status :
+                                                        Active<br />
+                                                        Active Team: 0 ( L ) - 0 ( R ) <br>In-Active Team: 0 ( L ) - 3 ( R ) <br>                                                    </p>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                            <div class="gritter-bottom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //BINARY TOOLTIP -->
+                                    <img src='assets/images/silver.png' class="img-circle img-responsive">
+                                    <h4 class="text-center"><a target="_parent" href="https://binary.zanthiumtechnosoft.com/Console/myGenealogy?user_id=SB549525">
+                                            ADMIN</a></h4>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+                <!-- //Child level 3 -->
+            </div>
+            <!-- //Binery Tree -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div> 
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>      
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Peity chart-->
+    <script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,11 +1,10 @@
-  
- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>  
-    <meta charset="utf-8">
-    <title> Register User</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+<head>
+  <meta charset="UTF-8">
+  <title>View User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -19,13 +18,19 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-      <link href="assets/css/vertical.css" rel="stylesheet" >
-    
-      
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
-</head>
+ 
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
+ 
+  <!-- Bootstrap (optional but makes it look nicer) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+
+
+</head>
 <body data-sidebar>
 
     <!-- Begin page -->
@@ -102,7 +107,7 @@
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
               <li><a href="view-user.html">View User</a></li>
-           
+            
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
@@ -117,7 +122,7 @@
               <li><a href="my-referral.html">My Referral</a></li>
               <li><a href="my-downline.html">My Downline</a></li>
               <li><a href="binaryTree.html">Genealogy Tree</a></li>
-           
+
             </ul>
           </li>
 
@@ -143,7 +148,7 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="income-payout.html">Income payout Status</a></li>
+             <li><a href="income-payout.html">Income payout Status</a></li>s
             </ul>
           </li>
 
@@ -181,95 +186,146 @@
       </div>
     </div>
   </div>
-  
-      
-<div class="main-content"style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;>
-            
-            
- <div class="page-content">
-  <!-- Header -->
-  <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
-    
-    <!-- Top Line -->
-    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
-      Join Member
-    </div>
 
-    <!-- Back Arrow & Title -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h4 style="font-weight: bold; margin: 0;">
-        <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i> Join Member
-      </h4>
+
+  <!-- DataTables & Buttons CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+
+
+
+  <!-- Container -->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Downline</title>
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
+  <div class="page-content">
+
+    <!-- Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2 style="margin: 0;">My Downline</h2>
     </div>
 
     <!-- Breadcrumb -->
-    <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
-      <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="location.href='index.html'"></i> / Join Member
+    <div style="color: #9ca3af; margin-bottom: 20px;">
+      <span style="margin-right: 5px;">🏠</span> / <span>Team</span> / <strong style="color: white;">My Downline</strong>
     </div>
-  </div>
 
-  <!-- Join Member Form -->
-  <div style="padding: 20px;">
-    <div style="background: white; border-radius: 10px; padding: 30px; color: black;">
-      <h5 style="margin-bottom: 20px;">Join Member</h5>
-      <form id="joinForm">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser's User ID *</label>
-            <input type="text" class="form-control" placeholder="e.g. john12345" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser Name *</label>
-            <input type="text" class="form-control" placeholder="e.g. John Doe" readonly style="width: 100%;">
-          </div>
+    <!-- Filter Section -->
+    <div style="background: white; color: black; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <!-- User ID Input with icon -->
+        <div style="flex: 1; display: flex; align-items: center; border: 1px solid #ccc; border-radius: 5px; overflow: hidden;">
+          <input type="text" value="SB111222" style="border: none; padding: 8px; flex: 1;" />
+          <span style="background: #eee; padding: 8px;"><i class="fas fa-user"></i></span>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Name *</label>
-            <input type="text" class="form-control" placeholder="Enter Full Name" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Phone *</label>
-            <input type="tel" class="form-control" placeholder="Enter Phone Number" required style="width: 100%;">
-          </div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Password *</label>
-            <input type="password" class="form-control" placeholder="Password *" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Confirm Password *</label>
-            <input type="password" class="form-control" placeholder="Confirm Password *" required style="width: 100%;">
-          </div>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <label style="font-weight: 500;">Select Position *</label>
-          <select class="form-select" required style="width: 100%;">
-            <option selected disabled>- Select Position -</option>
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-          </select>
-        </div>
-        <div style="display: flex; gap: 10px;">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-danger">Reset</button>
-        </div>
-      </form>
+
+        <!-- Dropdowns -->
+        <select style="padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+          <option>Select One</option>
+          <option>Left</option>
+          <option>Right</option>
+        </select>
+
+        <select style="padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+          <option>Select One</option>
+          <option>Active</option>
+          <option>In-Active</option>
+        </select>
+
+        <!-- Dates -->
+        <input type="date" value="2025-06-18" style="padding: 8px; border: 1px solid #ccc; border-radius: 5px;" />
+        <input type="date" value="2025-06-18" style="padding: 8px; border: 1px solid #ccc; border-radius: 5px;" />
+
+        <!-- Search Button -->
+        <button style="padding: 8px 16px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Search</button>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div style="background: white; color: black; padding: 15px; border-radius: 10px;">
+      <table id="referralTable" style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        <thead style="background-color: #f3f4f6;">
+          <tr>
+            <th>#</th>
+            <th>User ID</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Mobile No</th>
+            <th>Sponser</th>
+            <th>Leg</th>
+            <th>Join Date</th>
+            <th>Account Status</th>
+            <th>Activation Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>SB100001</td>
+            <td>rahul@123</td>
+            <td>Rahul Mehta</td>
+            <td>9876543210</td>
+            <td>SB111222</td>
+            <td>Left</td>
+            <td>2023-04-12</td>
+            <td>Active</td>
+            <td>2023-04-13</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>SB100002</td>
+            <td>priya@123</td>
+            <td>Priya Verma</td>
+            <td>9998887776</td>
+            <td>SB111222</td>
+            <td>Right</td>
+            <td>2023-05-08</td>
+            <td>Active</td>
+            <td>2023-05-09</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>SB100003</td>
+            <td>ramesh@123</td>
+            <td>Ramesh Kumar</td>
+            <td>8887776665</td>
+            <td>SB111222</td>
+            <td>Left</td>
+            <td>2023-06-01</td>
+            <td>In-Active</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>SB100004</td>
+            <td>sneha@123</td>
+            <td>Sneha Jain</td>
+            <td>7776665554</td>
+            <td>SB111222</td>
+            <td>Right</td>
+            <td>2023-07-10</td>
+            <td>In-Active</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-</div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Optional: JS for validation -->
-<script>
-  document.getElementById("joinForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Form submitted!");
-  });
-</script>
  <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>      
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -286,6 +342,26 @@
 
     <script src="assets/js/pages/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
+
+<!-- JS CDN -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<!-- Init DataTable -->
+<script>
+  $(document).ready(function () {
+    $('#referralTable').DataTable({
+      dom: 'Bfrtip',
+      buttons: ['copy', 'csv', 'excel', 'print'],
+      pageLength: 10,
+      lengthChange: false
+    });
+  });
+</script>
 
 </body>
 </html>

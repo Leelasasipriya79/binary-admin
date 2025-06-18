@@ -2,7 +2,7 @@
 <html lang="en">
 <head>  
     <meta charset="utf-8">
-    <title> Bloom It - Admin & Dashboard Template</title>
+    <title>SUBHATOM-Admin & Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -18,6 +18,15 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    
+                <!-- Add Bootstrap CSS & Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
   
        <link href="assets/css/vertical.css" rel="stylesheet" >
   
@@ -114,12 +123,12 @@
             <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
-              <li><a href="view-user.html">View Users</a></li>
-              <li><a href="view-member.html">Search User</a></li>
+              <li><a href="view-user.html">View User</a></li>
+              
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
-              <li><a href="active-special.html">Active Special</a></li>
+          
             </ul>
           </li>
 
@@ -127,10 +136,10 @@
           <li>
             <a href="#"><i class="fas fa-users me-2"></i>Team Management <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="smc-agent.html">My Referrals</a></li>
-              <li><a href="team-executive.html">My Downline</a></li>
-              <li><a href="team-senior-executive.html">Genealogy</a></li>
-              <li><a href="smc-field-officer.html">Auto Pool</a></li>
+              <li><a href="my-referral.html">My Referral</a></li>
+              <li><a href="my-downline.html">My Downline</a></li>
+              <li><a href="binary-tree.html">Genealogy Tree</a></li>
+              
             </ul>
           </li>
 
@@ -149,14 +158,14 @@
 
           <!-- KYC -->
           <li>
-            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+            <a href=""><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
           </li>
 
           <!-- Payout -->
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="fund-transfer.html">Income Status</a></li>
+              <li><a href="income-payout.html">Income payout Status</a></li>
             </ul>
           </li>
 
@@ -164,8 +173,7 @@
           <li>
             <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="fund-transfer.html">Matching Bonus</a></li>
-              <li><a href="fund-transfer.html">Auto Pool Bonus</a></li>
+             <li><a href="matching-income.html">Matching Income</a></li>
             </ul>
           </li>
 
@@ -199,179 +207,144 @@
  
 
 
-        <!-- Left Sidebar End -->
-
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
        
-        <div class="main-content">
+<div class="main-content"style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;>
             
             
+ <div class="page-content">
 
-            <div class="page-content">
-                <!-- Add Bootstrap CSS & Font Awesome -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- Header -->
+<div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
 
-<style>
-  
-    body {
-        background-color: #111827;
-        color: white;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    .dashboard-header {
-        padding: 20px;
-        border-bottom: 1px solid #333;
-    }
-
-    .dashboard-header h4 {
-        font-weight: bold;
-    }
-
-    .referral-buttons {
-        background: white;
-        padding: 10px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        font-weight: bold;
-        color: black;
-    }
-
-    .referral-buttons a {
-        padding: 6px 12px;
-        border-radius: 4px;
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .referral-buttons a.odd { background-color: #28a745; }
-    .referral-buttons a.even { background-color: #007bff; }
-    .referral-buttons a.whatsapp { background-color: #25D366; }
-    .referral-buttons a.facebook { background-color: #1877F2; }
-    .referral-buttons a.telegram { background-color: #0088cc; }
-
-    .card-box {
-        background: #fff;
-        color: #000;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .card-box.red {
-        background-color: red;
-        color: white;
-    }
-
-    .card-icon {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .card-title {
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    .card-value {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    
-
-
-
-
-</style>
-<div class="container-fluid">
-    <!-- Header -->
-    <div class="dashboard-header d-flex justify-content-between align-items-center">
-        <h4><i class="fas fa-arrow-left me-2"></i>Dashboard</h4>
+    <!-- Top Line -->
+    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+        Dashboard
     </div>
 
-    <!-- Breadcrumb -->
-    <div class="ps-3 pb-2 text-white-50">/ Dashboard</div>
-
-    <!-- Referral Links -->
-    <div class="referral-buttons">
-        Referral URL:
-        <a href="#" class="odd">Odd Side</a>
-        <a href="#" class="even">Even Side</a>
-        <a href="#" class="whatsapp">Whatsapp</a>
-        <a href="#" class="facebook">Facebook</a>
-        <a href="#" class="telegram">Telegram</a>
+    <!-- Back Arrow & Title -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h4 style="font-weight: bold; margin: 0;">
+            <i class="fas fa-arrow-left" onclick="history.back()" style="margin-right: 10px; cursor: pointer;"></i> Dashboard
+        </h4>
     </div>
 
-    <!-- Dashboard Cards -->
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-wallet text-primary"></i></div>
-                <div class="card-title">Income Wallet</div>
-                <div class="card-value">₹ 2475.00</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-users text-primary"></i></div>
-                <div class="card-title">Total Associate</div>
-                <div class="card-value">159</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-user-check text-success"></i></div>
-                <div class="card-title">Active Associate</div>
-                <div class="card-value">37</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-user-times text-danger"></i></div>
-                <div class="card-title">In-Active Associate</div>
-                <div class="card-value">122</div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-user-plus text-primary"></i></div>
-                <div class="card-title">Today Activation</div>
-                <div class="card-value">0</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box red">
-                <div class="card-icon"><i class="fas fa-id-card"></i></div>
-                <div class="card-title">Pending KYC</div>
-                <div class="card-value">0</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box">
-                <div class="card-icon"><i class="fas fa-money-bill-wave text-success"></i></div>
-                <div class="card-title">Total Withdraw</div>
-                <div class="card-value">₹ 762.50</div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card-box red">
-                <div class="card-icon"><i class="fas fa-money-bill"></i></div>
-                <div class="card-title">Pending Withdraw</div>
-                <div class="card-value">₹ 0.00</div>
-            </div>
-        </div>
+    <!-- Breadcrumb with Home Link -->
+    <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
+        <a href="index.html" style="color: rgba(255, 255, 255, 0.5); text-decoration: none;">
+            <i class="fas fa-home" style="margin-right: 5px;"></i>
+            / Dashboard
+        </a>
     </div>
+
 </div>
+
+
+
+    <!-- Referral Section -->
+    <div style="background: white; padding: 15px; margin-bottom: 20px; font-weight: bold; color: black; text-align: center;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;">
+            <span style="color: black;">Referral URL:</span>
+
+            <a style="padding: 6px 12px; border-radius: 4px; color: white; background-color: #28a745; text-decoration: none; font-size: 14px; cursor: pointer;"
+               onclick="copyToClipboard('https://yoursite.com/left')">Left Side</a>
+
+            <a style="padding: 6px 12px; border-radius: 4px; color: white; background-color: #007bff; text-decoration: none; font-size: 14px; cursor: pointer;"
+               onclick="copyToClipboard('https://yoursite.com/right')">Right Side</a>
+
+            <a href="https://wa.me/?text=https://yoursite.com/left" target="_blank"
+               style="padding: 6px 12px; border-radius: 4px; color: white; background-color: #25D366; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 6px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Left Link
+            </a>
+
+            <a href="https://wa.me/?text=https://yoursite.com/right" target="_blank"
+               style="padding: 6px 12px; border-radius: 4px; color: white; background-color: #25D366; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 6px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Right Link
+            </a>
+        </div>
+    </div>
+
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function () {
+            alert('Copied: ' + text);
+        }, function () {
+            alert('Failed to copy text');
+        });
+    }
+</script>
+
+
+
+<div class="row">
+    
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-wallet text-primary"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Income Wallet</div>
+            <div style="font-size: 20px; font-weight: bold;">₹ 2475.00</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-users text-primary"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Total Users</div>
+            <div style="font-size: 20px; font-weight: bold;">159</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-user-check text-success"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Active Users</div>
+            <div style="font-size: 20px; font-weight: bold;">37</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-user-times text-danger"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">In-Active Users</div>
+            <div style="font-size: 20px; font-weight: bold;">122</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-user-plus text-primary"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Today Activation</div>
+            <div style="font-size: 20px; font-weight: bold;">0</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background-color: red; color: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-id-card"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Pending KYC</div>
+            <div style="font-size: 20px; font-weight: bold;">0</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background: #fff; color: #000; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-money-bill-wave text-success"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Total Withdraw</div>
+            <div style="font-size: 20px; font-weight: bold;">₹ 762.50</div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+        <div style="background-color: red; color: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; text-align: center;">
+            <div style="font-size: 24px; margin-bottom: 10px;"><i class="fas fa-money-bill"></i></div>
+            <div style="font-size: 14px; font-weight: bold;">Pending Withdraw</div>
+            <div style="font-size: 20px; font-weight: bold;">₹ 0.00</div>
+        </div>
+    </div>
+
+</div>
+
+
 <div class="container-fluid mt-4">
   <div class="row">
     <!-- Left Table -->
@@ -401,11 +374,7 @@
             <tr><td>4</td><td>SB818711</td><td>praveen reddy</td><td>2024-11-21 19:43:14</td><td>Binary Admin (User ID:SB111222)</td></tr>
             <tr><td>7</td><td>SB244431</td><td>Sampat</td><td>2023-12-04 13:05:55</td><td>Binary Admin (User ID:SB111222)</td></tr>
             <tr><td>5</td><td>SB308464</td><td>Fff</td><td>2023-12-21 17:25:09</td><td>Sampat (User ID:SB244431)</td></tr>
-            <tr><td>6</td><td>SB409675</td><td>Fff</td><td>2023-12-21 17:24:26</td><td>Sampat (User ID:SB244431)</td></tr>
-            <tr><td>8</td><td>SB944535</td><td>TANUJA</td><td>2023-10-11 11:29:09</td><td>Zanthium Technosoft (User ID:SB307357)</td></tr>
-            <tr><td>9</td><td>SB876318</td><td>KAJAL</td><td>2023-10-11 11:26:31</td><td>Zanthium Technosoft (User ID:SB307357)</td></tr>
-            <tr><td>10</td><td>SB589846</td><td>Shailesh</td><td>2023-09-28 13:21:09</td><td>Zanthium Technosoft (User ID:SB307357)</td></tr>
-            <tr><td>11</td><td>SB722761</td><td>Shailesh</td><td>2023-09-28 13:19:47</td><td>Zanthium Technosoft (User ID:SB307357)</td></tr>
+           
           </tbody>
         </table>
       </div>
@@ -452,18 +421,14 @@
             <tr><td>2</td><td>SB323640</td><td>Ram Vilas meena</td><td>08-09-2023 16:09:08</td><td>Pyarelal meena (User ID:SB296892)</td><td>₹858.00</td></tr>
             <tr><td>3</td><td>SB296892</td><td>Pyarelal meena</td><td>08-09-2023 16:08:08</td><td>Pyarelal meena (User ID:SB296892)</td><td>₹858.00</td></tr>
             <tr><td>4</td><td>SB836954</td><td>Sunita mina</td><td>03-09-2023 15:57:03</td><td>Sunita mina (User ID:SB836954)</td><td>₹858.00</td></tr>
-            <tr><td>5</td><td>SB805278</td><td>Rahul agrawal</td><td>22-08-2023 12:15:22</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>₹858.00</td></tr>
-            <tr><td>6</td><td>SB409332</td><td>SANJIT DEBNATH</td><td>14-11-2022 07:50:14</td><td>Zanthium Technosoft (User ID:SB307357)</td><td>₹858.00</td></tr>
-            <tr><td>7</td><td>SB317465</td><td>PALASH DEBNATH</td><td>04-10-2022 18:23:04</td><td>Bappi Debnath (User ID:SB471122)</td><td>₹858.00</td></tr>
-            <tr><td>8</td><td>SB220267</td><td>PALASH DEBNATH</td><td>04-10-2022 18:22:04</td><td>Bappi Debnath (User ID:SB471122)</td><td>₹858.00</td></tr>
-            <tr><td>9</td><td>SB428994</td><td>PALASH DEBNATH</td><td>04-10-2022 18:21:04</td><td>Bappi Debnath (User ID:SB471122)</td><td>₹858.00</td></tr>
+           
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
-
+</div>
 <script>
   $(document).ready(function () {
     $('#profileUpgradedTable').DataTable({
@@ -475,9 +440,9 @@
   });
 </script>
 
-  </div>
 </div>
-
+</div>
+</div>
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>

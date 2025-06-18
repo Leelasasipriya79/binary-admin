@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>View Member</title>
+  <title>View User</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -25,7 +25,12 @@
  
 <link href="assets/css/vertical.css" rel="stylesheet" > 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
 </head>
 
 <body data-sidebar>
@@ -103,12 +108,12 @@
             <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
-              <li><a href="view-user.html">View Users</a></li>
-              <li><a href="search-user.html">Search User</a></li>
+              <li><a href="view-user.html">View User</a></li>
+            
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
-              <li><a href="active-special.html">Active Special</a></li>
+             
             </ul>
           </li>
 
@@ -116,10 +121,10 @@
           <li>
             <a href="#"><i class="fas fa-users me-2"></i>Team Management <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="smc-agent.html">My Referrals</a></li>
-              <li><a href="team-executive.html">My Downline</a></li>
-              <li><a href="team-senior-executive.html">Genealogy</a></li>
-              <li><a href="smc-field-officer.html">Auto Pool</a></li>
+              <li><a href="my-referral.html">My Referral</a></li>
+              <li><a href="my-downline.html">My Downline</a></li>
+              <li><a href="binaryTree.html">Genealogy Tree</a></li>
+              
             </ul>
           </li>
 
@@ -145,7 +150,7 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="fund-transfer.html">Income Status</a></li>
+              <li><a href="income-payout.html">Income payout Status</a></li>
             </ul>
           </li>
 
@@ -153,8 +158,7 @@
           <li>
             <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="fund-transfer.html">Matching Bonus</a></li>
-              <li><a href="fund-transfer.html">Auto Pool Bonus</a></li>
+              <li><a href="matching-income.html">Matching Income</a></li>
             </ul>
           </li>
 
@@ -186,138 +190,113 @@
   </div>
   
 
+<div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
+  <div class="page-content">
+    <div class="container mt-4">
 
+      <!-- Header with Back and Home -->
+      <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
+        <!-- Top Title -->
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+          View Member
+        </div>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #151a25;
-      color: white;
-    }
-    .container-box {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      color: #000;
-    }
-    .form-select, .form-control {
-      border-radius: 5px;
-    }
-    .search-btn {
-      background-color: #007bff;
-      color: white;
-    }
-    .table-light th {
-      background-color: #f8f9fa;
-    }
-  </style>
+        <!-- Back Arrow and Title -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="font-weight: bold; margin: 0;">
+            <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i> View Member
+          </h4>
+        </div>
 
-<div class="main-content">
-<div class="page-content">
-<div class="container mt-4">
-  <!-- Breadcrumb and Title -->
-  <div class="text-white mb-4">
-    <h4>View Member</h4>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item text-white"><a href="#" class="text-decoration-none text-light">Member</a></li>
-        <li class="breadcrumb-item active text-white" aria-current="page">View Member</li>
-      </ol>
-    </nav>
-  </div>
+        <!-- Breadcrumb -->
+        <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
+          <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="window.location.href='index.html'"></i> / View Member
+        </div>
+      </div>
 
-  <!-- Filter Section -->
-  <div class="container-box mb-4">
-    <div class="row g-3 align-items-end">
-      <div class="col-md-3">
-        <label class="form-label">Enter User ID</label>
-        <input type="text" class="form-control" placeholder="User ID">
+      <!-- Filter Section -->
+      <div style="background: white; border-radius: 10px; padding: 20px; color: #000; margin-top: 20px; margin-bottom: 1.5rem;">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-3">
+            <label style="display: block; margin-bottom: 5px;">Enter User ID</label>
+            <input type="text" class="form-control" placeholder="User ID" style="border-radius: 5px;">
+          </div>
+          <div class="col-md-2">
+            <label style="display: block; margin-bottom: 5px;">From</label>
+            <input type="date" class="form-control" style="border-radius: 5px;">
+          </div>
+          <div class="col-md-2">
+            <label style="display: block; margin-bottom: 5px;">To</label>
+            <input type="date" class="form-control" style="border-radius: 5px;">
+          </div>
+          <div class="col-md-2">
+            <button style="background-color: #007bff; color: white; border: none; width: 100%; border-radius: 5px; padding: 6px;">Search</button>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3">
-        <label class="form-label">Select One</label>
-        <select class="form-select">
-          <option selected>Select One</option>
-          <option value="1">Option A</option>
-          <option value="2">Option B</option>
-        </select>
-      </div>
-      <div class="col-md-2">
-        <label class="form-label">From</label>
-        <input type="date" class="form-control">
-      </div>
-      <div class="col-md-2">
-        <label class="form-label">To</label>
-        <input type="date" class="form-control">
-      </div>
-      <div class="col-md-2">
-        <button class="btn search-btn w-100">Search</button>
-      </div>
-    </div>
-  </div>
 
-  <!-- Table Section -->
-  <div class="container-box">
-    <h5>View Member</h5>
+      <!-- Table Section -->
+      <div style="background: white; border-radius: 10px; padding: 20px; color: #000;">
+        <h5>View Member</h5>
 
-    <!-- Top Controls -->
-    <div class="d-flex justify-content-between align-items-center mb-2">
-      <div>
-        Show
-        <select class="form-select d-inline-block w-auto mx-2" style="height: 30px;">
-          <option>10</option>
-          <option>25</option>
-          <option>50</option>
-          <option>100</option>
-        </select>
-        entries
-      </div>
-      <div>
-        Search:
-        <input type="text" class="form-control d-inline-block w-auto" style="height: 30px;">
-      </div>
-    </div>
+        <!-- Top Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <div>
+            Show
+            <select style="height: 30px; border-radius: 5px; margin: 0 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+            entries
+          </div>
+          <div>
+            Search:
+            <input type="text" style="height: 30px; border-radius: 5px;">
+          </div>
+        </div>
 
-    <!-- Table -->
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover">
-        <thead class="table-light">
-          <tr>
-            <th>#</th>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Sponsor</th>
-            <th>Placeholder</th>
-            <th>Leg</th>
-            <th>Status</th>
-            <th>Joining Date</th>
-            <th>PassKey</th>
-            <th>Activation Date</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="12" class="text-center">No data available in table</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <!-- Table -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr style="background-color: #f8f9fa;">
+                <th>#</th>
+                <th>User ID</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Sponsor</th>
+                <th>Leg</th>
+                <th>Status</th>
+                <th>Joining Date</th>
+                <th>Activation Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="11" style="text-align: center;">No data available in table</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <!-- Bottom Controls -->
-    <div class="d-flex justify-content-between">
-      <div>Showing 0 to 0 of 0 entries</div>
-      <div>
-        <button class="btn btn-outline-secondary btn-sm me-1">Previous</button>
-        <button class="btn btn-outline-secondary btn-sm">Next</button>
+        <!-- Bottom Controls -->
+        <div style="display: flex; justify-content: space-between;">
+          <div>Showing 0 to 0 of 0 entries</div>
+          <div>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px; margin-right: 5px;">Previous</button>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px;">Next</button>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
-</div>
-</div>
+
 
 
 
