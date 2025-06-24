@@ -65,34 +65,16 @@
     <div data-simplebar class="h-100">
       <!-- Profile Info with Dropdown -->
 <div style="background-color: #195233; padding: 16px; color: white; position: relative;">
- 
   <div style="font-size: 14px;">
     Hi, <strong>SB111222</strong><br />
-    <div style="position: relative;">
-      <button onclick="toggleProfileDropdown()" style="background: none; border: none; color: white; font-weight: bold; cursor: pointer;">
-        Binary Admin <span style="font-size: 12px;">&#9662;</span>
-      </button>
-      <div id="profileDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; color: black; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 150px; z-index: 100;">
-        <a href="profile.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">👤 View Profile</a>
-        <a href="logout.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">🚪 Logout</a>
-      </div>
-    </div>
+    <span style="font-weight: bold;">Binary Admin</span>
   </div>
 </div>
 
-  <script>
-  function toggleProfileDropdown() {
-    const dropdown = document.getElementById("profileDropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-  }
 
-  // Optional: Hide dropdown on outside click
-  window.addEventListener("click", function(e) {
-    if (!e.target.closest("#profileDropdown") && !e.target.closest("button")) {
-      document.getElementById("profileDropdown").style.display = "none";
-    }
-  });
-</script>
+ 
+
+ 
 <div id="sidebar-menu">
         <ul id="side-menu">
           <li class="active">
@@ -125,21 +107,24 @@
           </li>
 
           <!-- E-Pin -->
-          <li>
-            <a href="#"><i class="fas fa-key me-2"></i>E-Pin Management <span>&#9662;</span></a>
+           <li>
+            <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="create-chits.html">Send E-Pin</a></li>
-              <li><a href="chit-amount.html">View E-Pins</a></li>
-              <li><a href="month.html">Transfer History</a></li>
-              <li><a href="monthly-investment.html">Withdraw E-Pin</a></li>
-              <li><a href="auction.html">Update Payment</a></li>
-              <li><a href="auction.html">Request History</a></li>
+              <li><a href="activation.html">Activation</a></li>
+             
+            </ul>
+          </li>
+              <li>
+            <a href="#"><i class="fas fa-key me-2"></i>Withdraw <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="withdraw-request.html">Withdraw Request</a></li>
+               <li><a href="withdraw-history.html">Withdraw History</a></li>
             </ul>
           </li>
 
           <!-- KYC -->
           <li>
-            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+            <a href="kyc-request.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
           </li>
 
           <!-- Payout -->
@@ -162,16 +147,16 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="kyc-pending.html">Wallet Statement</a></li>
-              <li><a href="kyc-pending.html">Outstanding Wallet</a></li>
+              <li><a href="wallet-statement.html">Wallet Statement</a></li>
+            <li><a href="wallet-outstanding.html">Wallet Outstanding</a></li>
             </ul>
           </li>
 
           <!-- Settings -->
           <li>
-            <a href="#"><i class="fas fa-cogs me-2"></i>Settings <span>&#9662;</span></a>
+            <a href="#"><i class="fas fa-cogs me-2"></i>Setting <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="kyc-pending.html">Notice Settings</a></li>
+               <li><a href="notice-setting.html">Notice Setting</a></li>
             </ul>
           </li>
 

@@ -1,11 +1,10 @@
-  
- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>  
-    <meta charset="utf-8">
-    <title> Register User</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+<head>
+  <meta charset="UTF-8">
+  <title>View User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -19,11 +18,19 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-      <link href="assets/css/vertical.css" rel="stylesheet" >
-    
-      
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
 </head>
 
 <body data-sidebar>
@@ -70,8 +77,6 @@
 
 
  
-
-  
 <div id="sidebar-menu">
         <ul id="side-menu">
           <li class="active">
@@ -84,7 +89,7 @@
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
               <li><a href="view-user.html">View User</a></li>
-           
+            
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
@@ -99,11 +104,11 @@
               <li><a href="my-referral.html">My Referral</a></li>
               <li><a href="my-downline.html">My Downline</a></li>
               <li><a href="binaryTree.html">Genealogy Tree</a></li>
-           
+              
             </ul>
           </li>
 
-           <!-- E-Pin -->
+          <!-- E-Pin -->
            <li>
             <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
             <ul class="submenu">
@@ -118,6 +123,7 @@
                <li><a href="withdraw-history.html">Withdraw History</a></li>
             </ul>
           </li>
+
           <!-- KYC -->
           <li>
             <a href="kyc-request.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
@@ -135,7 +141,7 @@
           <li>
             <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
             <ul class="submenu">
-               <li><a href="matching-income.html">Matching Income</a></li>
+              <li><a href="matching-income.html">Matching Income</a></li>
             </ul>
           </li>
 
@@ -144,7 +150,7 @@
             <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
             <ul class="submenu">
               <li><a href="wallet-statement.html">Wallet Statement</a></li>
-            <li><a href="wallet-outstanding.html">Wallet Outstanding</a></li>
+              <li><a href="wallet-outstanding.html">Wallet Outstanding</a></li>
             </ul>
           </li>
 
@@ -152,7 +158,7 @@
           <li>
             <a href="#"><i class="fas fa-cogs me-2"></i>Setting <span>&#9662;</span></a>
             <ul class="submenu">
-               <li><a href="notice-setting.html">Notice Setting</a></li>
+              <li><a href="notice-setting.html">Notice Setting</a></li>
             </ul>
           </li>
 
@@ -166,95 +172,130 @@
     </div>
   </div>
   
-      
-<div class="main-content"style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;>
-            
-            
- <div class="page-content">
-  <!-- Header -->
-  <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
-    
-    <!-- Top Line -->
-    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
-      Join Member
-    </div>
 
-    <!-- Back Arrow & Title -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h4 style="font-weight: bold; margin: 0;">
-        <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i> Join Member
-      </h4>
-    </div>
+<div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
+  <div class="page-content">
+    <div class="container mt-4">
 
-    <!-- Breadcrumb -->
-    <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
-      <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="location.href='index.html'"></i> / Join Member
-    </div>
-  </div>
+      <!-- Header with Back and Home -->
+      <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
+        <!-- Top Title -->
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+          Wallet Outstanding
+        </div>
 
-  <!-- Join Member Form -->
-  <div style="padding: 20px;">
-    <div style="background: white; border-radius: 10px; padding: 30px; color: black;">
-      <h5 style="margin-bottom: 20px;">Join Member</h5>
-      <form id="joinForm">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser's User ID *</label>
-            <input type="text" class="form-control" placeholder="e.g. john12345" required style="width: 100%;">
+        <!-- Back Arrow and Title -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="font-weight: bold; margin: 0;">
+            <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i> Wallet
+          </h4>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
+          <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="window.location.href='index.html'"></i> / Wallet Outstanding
+        </div>
+      </div>
+             <!-- Filter Section -->
+      <div style="background: white; border-radius: 10px; padding: 20px; color: #000; margin-top: 20px; margin-bottom: 1.5rem;">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-3">
+            <label style="display: block; margin-bottom: 5px;">Enter User ID</label>
+            <input type="text" class="form-control" placeholder="User ID" style="border-radius: 5px;">
           </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser Name *</label>
-            <input type="text" class="form-control" placeholder="e.g. John Doe" readonly style="width: 100%;">
+         
+          <div class="col-md-2">
+            <button style="background-color: #007bff; color: white; border: none; width: 100%; border-radius: 5px; padding: 6px;">Search</button>
           </div>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Name *</label>
-            <input type="text" class="form-control" placeholder="Enter Full Name" required style="width: 100%;">
+      </div>
+     
+
+      <!-- Table Section -->
+      <div style="background: white; border-radius: 10px; padding: 20px; color: #000;">
+        <h5>wallet Outstanding</h5>
+
+        <!-- Top Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <div>
+            Show
+            <select style="height: 30px; border-radius: 5px; margin: 0 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+            entries
           </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Phone *</label>
-            <input type="tel" class="form-control" placeholder="Enter Phone Number" required style="width: 100%;">
+          <div>
+            Search:
+            <input type="text" style="height: 30px; border-radius: 5px;">
           </div>
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Password *</label>
-            <input type="password" class="form-control" placeholder="Password *" required style="width: 100%;">
+
+        <!-- Table -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr style="background-color: #f8f9fa;">
+                <th>#</th>
+                 <th>Name</th>
+                <th>User ID</th>
+                <th>Income Wallet</th>
+                
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="11" style="text-align: center;">No data available in table</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bottom Controls -->
+        <div style="display: flex; justify-content: space-between;">
+          <div>Showing 0 to 0 of 0 entries</div>
+          <div>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px; margin-right: 5px;">Previous</button>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px;">Next</button>
           </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Confirm Password *</label>
-            <input type="password" class="form-control" placeholder="Confirm Password *" required style="width: 100%;">
-          </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <label style="font-weight: 500;">Select Position *</label>
-          <select class="form-select" required style="width: 100%;">
-            <option selected disabled>- Select Position -</option>
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-          </select>
-        </div>
-        <div style="display: flex; gap: 10px;">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-danger">Reset</button>
-        </div>
-      </form>
+      </div>
+
     </div>
   </div>
 </div>
-</div>
+
+
+
+
+
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Optional: JS for validation -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+
 <script>
-  document.getElementById("joinForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Form submitted!");
+  $(document).ready(function () {
+    $('#viewTable').DataTable({
+      "order": [],
+      "language": {
+        "emptyTable": "No data available in table"
+      }
+    });
   });
 </script>
- <!-- JAVASCRIPT -->
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>      
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>

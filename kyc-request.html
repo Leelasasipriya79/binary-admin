@@ -82,34 +82,16 @@
     <div data-simplebar class="h-100">
       <!-- Profile Info with Dropdown -->
 <div style="background-color: #195233; padding: 16px; color: white; position: relative;">
- 
   <div style="font-size: 14px;">
     Hi, <strong>SB111222</strong><br />
-    <div style="position: relative;">
-      <button onclick="toggleProfileDropdown()" style="background: none; border: none; color: white; font-weight: bold; cursor: pointer;">
-        Binary Admin <span style="font-size: 12px;">&#9662;</span>
-      </button>
-      <div id="profileDropdown" style="display: none; position: absolute; top: 30px; left: 0; background: white; color: black; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); min-width: 150px; z-index: 100;">
-        <a href="profile.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">👤 View Profile</a>
-        <a href="logout.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">🚪 Logout</a>
-      </div>
-    </div>
+    <span style="font-weight: bold;">Binary Admin</span>
   </div>
 </div>
 
-  <script>
-  function toggleProfileDropdown() {
-    const dropdown = document.getElementById("profileDropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-  }
 
-  // Optional: Hide dropdown on outside click
-  window.addEventListener("click", function(e) {
-    if (!e.target.closest("#profileDropdown") && !e.target.closest("button")) {
-      document.getElementById("profileDropdown").style.display = "none";
-    }
-  });
-</script>
+ 
+
+
 
 <div id="sidebar-menu">
         <ul id="side-menu">
@@ -142,22 +124,25 @@
             </ul>
           </li>
 
-          <!-- E-Pin -->
-          <li>
-            <a href="#"><i class="fas fa-key me-2"></i>E-Pin Management <span>&#9662;</span></a>
+         <!-- E-Pin -->
+           <li>
+            <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="create-chits.html">Send E-Pin</a></li>
-              <li><a href="chit-amount.html">View E-Pins</a></li>
-              <li><a href="month.html">Transfer History</a></li>
-              <li><a href="monthly-investment.html">Withdraw E-Pin</a></li>
-              <li><a href="auction.html">Update Payment</a></li>
-              <li><a href="auction.html">Request History</a></li>
+              <li><a href="activation.html">Activation</a></li>
+             
+            </ul>
+          </li>
+              <li>
+            <a href="#"><i class="fas fa-key me-2"></i>Withdraw <span>&#9662;</span></a>
+            <ul class="submenu">
+              <li><a href="withdraw-request.html">Withdraw Request</a></li>
+               <li><a href="withdraw-history.html">Withdraw History</a></li>
             </ul>
           </li>
 
           <!-- KYC -->
           <li>
-            <a href="kyc-pending.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
+            <a href="kyc-request.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
           </li>
 
           <!-- Payout -->
@@ -180,16 +165,16 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="kyc-pending.html">Wallet Statement</a></li>
-              <li><a href="kyc-pending.html">Outstanding Wallet</a></li>
+              <li><a href="wallet-statement.html">Wallet Statement</a></li>
+            <li><a href="wallet-outstanding.html">Wallet Outstanding</a></li>
             </ul>
           </li>
 
           <!-- Settings -->
           <li>
-            <a href="#"><i class="fas fa-cogs me-2"></i>Settings <span>&#9662;</span></a>
+            <a href="#"><i class="fas fa-cogs me-2"></i>Setting <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="kyc-pending.html">Notice Settings</a></li>
+           <li><a href="notice-setting.html">Notice Setting</a></li>
             </ul>
           </li>
 
@@ -246,57 +231,7 @@
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <?php
-
-                                                    $kyc_query = mysqli_query($con, "SELECT * FROM user WHERE kyc_status='Pending'");
-                                                    $sl = 1;
-                                                    
-                                                    while($row = mysqli_fetch_assoc($kyc_query)) {
-                                                    ?>
-                                                    <tr>
-                                                        <td><?php echo $sl++; ?></td>
-                                                        <td><?php echo $row['userid']; ?></td>
-                                                        <td><?php echo $row['name']; ?></td>
-                                                        <td><?php echo $row['mobile']; ?></td>
-                                                        <td><?php echo $row['email']; ?></td>
-                                                        <td><?php echo $row['aadhar_no']; ?></td>
-                                                        <td><a href="../user/<?php echo $row['aadhar_front_image']; ?>" target="_blank"><img src="../user/<?php echo $row['aadhar_front_image']; ?>" width="100px" alt="Aadhar Front Image"></a></td>
-                                                        <td><a href="../user/<?php echo $row['aadhar_back_image']; ?>" target="_blank"><img src="../user/<?php echo $row['aadhar_back_image']; ?>" width="100px" alt="Aadhar Back Image"></a></td>
-                                            
-                                                        <td><?php echo $row['pan_no']; ?></td>
-                                                        <td><a href="../user/<?php echo $row['pan_card_image']; ?>" target="_blank"><img src="../user/<?php echo $row['pan_card_image']; ?>" width="100px" alt="PAN Image"></a></td>
-                                            
-                                                        <td><?php echo $row['bank_name']; ?></td>
-                                                        <td><?php echo $row['account_number']; ?></td>
-                                                        <td><?php echo $row['ifsc_code']; ?></td>
-                                                        <td><?php echo $row['bank_branch']; ?></td>
-                                                        <td><?php echo $row['account_holder_name']; ?></td>
-                                                        <td><a href="../user/<?php echo $row['passbook_image']; ?>" target="_blank"><img src="../user/<?php echo $row['passbook_image']; ?>" width="100px" alt="Passbook Image"></a></td>
-                                            
-                                                        <td>
-                                                            <?php 
-                                                                if ($row['kyc_status'] == 'Approved') {
-                                                                    echo '<span class="badge bg-success">Approved</span>';
-                                                                } elseif ($row['kyc_status'] == 'Rejected') {
-                                                                    echo '<span class="badge bg-danger">Rejected</span>';
-                                                                } else {
-                                                                    echo '<span class="badge bg-warning text-dark">Pending</span>';
-                                                                }
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <a href="kyc_action.php?userid=<?php echo $row['userid']; ?>&action=Active" class="btn btn-sm btn-success">Approve</a>
-                                                            <a href="kyc_action.php?userid=<?php echo $row['userid']; ?>&action=In Active" class="btn btn-sm btn-danger">Reject</a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php } ?>
-
-
-											
-
-										
-                                            </tbody>
+                                         
                                         </table>
                                     </div>
                                 </div>
@@ -350,5 +285,22 @@
 <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
 
 <script src="assets/js/analytics_dashboard.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>      
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Peity chart-->
+    <script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

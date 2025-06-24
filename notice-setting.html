@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Block User History</title>
+  <title>View User</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -26,7 +25,12 @@
  
 <link href="assets/css/vertical.css" rel="stylesheet" > 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">   
 </head>
 
 <body data-sidebar>
@@ -73,8 +77,6 @@
 
 
  
- 
-
 
 
 <div id="sidebar-menu">
@@ -89,11 +91,11 @@
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
               <li><a href="view-user.html">View User</a></li>
-          
+            
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
-  
+             
             </ul>
           </li>
 
@@ -104,11 +106,11 @@
               <li><a href="my-referral.html">My Referral</a></li>
               <li><a href="my-downline.html">My Downline</a></li>
               <li><a href="binaryTree.html">Genealogy Tree</a></li>
-           
+              
             </ul>
           </li>
 
-          <!-- E-Pin -->
+           <!-- E-Pin -->
            <li>
             <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
             <ul class="submenu">
@@ -123,7 +125,6 @@
                <li><a href="withdraw-history.html">Withdraw History</a></li>
             </ul>
           </li>
-
           <!-- KYC -->
           <li>
             <a href="kyc-request.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
@@ -133,7 +134,7 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
             <ul class="submenu">
-          <li><a href="income-payout.html">Income payout Status</a></li>
+              <li><a href="income-payout.html">Income payout Status</a></li>
             </ul>
           </li>
 
@@ -141,7 +142,7 @@
           <li>
             <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
             <ul class="submenu">
-               <li><a href="matching-income.html">Matching Income</a></li>
+              <li><a href="matching-income.html">Matching Income</a></li>
             </ul>
           </li>
 
@@ -172,155 +173,166 @@
     </div>
   </div>
   
+
 <div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
-<div class="page-content">
+  <div class="page-content">
+    <div class="container mt-4">
 
- <!-- Header Section -->
-<div style="padding: 10px 0;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <button onclick="history.back()" style="background: none; border: none; font-size: 24px; color: white; cursor: pointer;">←</button>
-      <h2 style="margin: 0 0 10px 0;">Block User History</h2>
+      <!-- Header with Back and Home -->
+      <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
+        <!-- Top Title -->
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+        Notice Setting
+        </div>
+
+        <!-- Back Arrow and Title -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="font-weight: bold; margin: 0;">
+            <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i>setting
+          </h4>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
+          <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="window.location.href='index.html'"></i> /Notice Setting
+        </div>
+      </div>
+           
+     
+
+      <!-- Table Section -->
+      <div style="background: white; border-radius: 10px; padding: 20px; color: #000;">
+         <h5>Notice Setting</h5>
+        <!-- Add Notice Button -->
+        <div style="text-align: right; margin-bottom: 10px;">
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addNoticeModal">
+    <i class="fa fa-plus"></i> Add Notice
+  </button>
+</div>
+
+       
+
+        <!-- Top Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <div>
+            Show
+            <select style="height: 30px; border-radius: 5px; margin: 0 8px;">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+            entries
+          </div>
+          <div>
+            Search:
+            <input type="text" style="height: 30px; border-radius: 5px;">
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr style="background-color: #f8f9fa;">
+                <th>#</th>
+                 <th>Notice Header</th>
+                <th>Notice Message</th>
+                <th> Add date</th>
+                <th>From date</th>
+                <th> To date</th>
+                <th>Action</th>
+               
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="11" style="text-align: center;">No data available in table</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bottom Controls -->
+        <div style="display: flex; justify-content: space-between;">
+          <div>Showing 0 to 0 of 0 entries</div>
+          <div>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px; margin-right: 5px;">Previous</button>
+            <button style="border: 1px solid #ccc; background: transparent; padding: 5px 10px; font-size: 14px;">Next</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div style="font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 5px;">
-    <span>🏠</span>
-    <span>Member</span>
-    <span style="color: #ccc;">/</span>
-    <span style="color: white;">Block User History</span>
   </div>
 </div>
 
-
-  <!-- Table Box -->
-  <div style="background-color: white; color: black; border-radius: 10px; padding: 20px; margin-top: 20px;">
-    <h3 style="margin-bottom: 20px;">Block User History</h3>
-
-    <!-- Controls -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-      <div>
-        <label>Show 
-          <select style="padding: 5px 10px; margin: 0 5px; border: 1px solid #ccc; border-radius: 5px;">
-            <option>10</option>
-            <option>25</option>
-            <option>50</option>
-          </select> 
-        entries</label>
+<!-- Add Notice Modal -->
+<div class="modal fade" id="addNoticeModal" tabindex="-1" aria-labelledby="addNoticeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addNoticeModalLabel">Add Notice :</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div>
-        <label>Search: 
-          <input type="text" style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 5px;" />
-        </label>
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label for="noticeHeader" class="form-label">Notice Header</label>
+          <input type="text" class="form-control" id="noticeHeader" placeholder="e.g John Adem">
+        </div>
+
+        <div class="mb-3">
+          <label for="noticeMessage" class="form-label">Notice Message</label>
+          <textarea class="form-control" id="noticeMessage" rows="3" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="fromDate" class="form-label">From Date</label>
+          <input type="text" class="form-control" id="fromDate" value="19-06-2025" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label for="toDate" class="form-label">To Date</label>
+          <input type="text" class="form-control" id="toDate" placeholder="e.g. To Date">
+        </div>
+
       </div>
-    </div>
-
-    <!-- Table -->
-    <div style="overflow-x: auto;">
-      <table style="width: 100%; border-collapse: collapse;">
-        <thead>
-          <tr style="background-color: #f1f1f1; font-weight: bold; text-align: left;">
-            <th style="padding: 10px;">#</th>
-            <th style="padding: 10px;">User ID</th>
-            <th style="padding: 10px;">Password</th>
-            <th style="padding: 10px;">Name</th>
-            <th style="padding: 10px;">Phone</th>
-            <th style="padding: 10px;">Sponser</th>
-            <th style="padding: 10px;">Status</th>
-            <th style="padding: 10px;">Joining Date</th>
-            <th style="padding: 10px;">Activation Date</th>
-            <th style="padding: 10px;">Action</th>
-          </tr>
-        </thead>
-       <tbody>
-  <tr>
-    <td>1</td>
-    <td>SB981871</td>
-    <td>12345</td>
-    <td>praveen reddy</td>
-    <td>9912345678</td>
-    <td>Binary Admin (User ID:SB111222)</td>
-    <td>Not-Active</td>
-    <td>21-11-2024 19:43:21</td>
-    <td></td>
-    <td>
-      <button onclick="location.href='edit.html'" style="padding: 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px;">More</button>
-      <button style="padding: 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>SB114473</td>
-    <td>123456</td>
-    <td>sk</td>
-    <td>9999999999</td>
-    <td>Binary Admin (User ID:SB111222)</td>
-    <td>Not-Active</td>
-    <td>29-09-2022 10:53:48</td>
-    <td></td>
-    <td>
-      <button onclick="location.href='edit.html'" style="padding: 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px;">More</button>
-      <button style="padding: 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
-    </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>SB160253</td>
-    <td>123456</td>
-    <td>srinivas</td>
-    <td>9700000000</td>
-    <td>Binary Admin (User ID:SB111222)</td>
-    <td>Not-Active</td>
-    <td>30-09-2022 14:36:58</td>
-    <td></td>
-    <td>
-      <button onclick="location.href='edit.html'" style="padding: 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px;">More</button>
-      <button style="padding: 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
-    </td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>SB241390</td>
-    <td>123456</td>
-    <td>JOSHUA</td>
-    <td>9900000000</td>
-    <td>Binary Admin (User ID:SB111222)</td>
-    <td>Not-Active</td>
-    <td>30-09-2022 14:38:20</td>
-    <td></td>
-    <td>
-      <button onclick="location.href='edit.html'" style="padding: 5px; background-color: #0d6efd; color: white; border: none; border-radius: 4px;">More</button>
-      <button style="padding: 5px; background-color: #dc3545; color: white; border: none; border-radius: 4px;">Block</button>
-    </td>
-  </tr>
- 
-
-
-
-
-</tbody>
-
-      </table>
-    </div>
-
-    <!-- Pagination -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-size: 14px;">
-      <div>Showing 1 to 10 of 159 entries</div>
-      <div>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">Previous</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">1</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">2</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">3</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">4</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">5</button>
-        <span style="margin: 0 5px;">…</span>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">16</button>
-        <button style="padding: 5px 10px; margin: 0 2px; border: 1px solid #ccc; border-radius: 5px;">Next</button>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Add Now</button>
+        <button type="button" class="btn btn-danger">Reset</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-</div>
 
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#viewTable').DataTable({
+      "order": [],
+      "language": {
+        "emptyTable": "No data available in table"
+      }
+    });
+  });
+</script>
+
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>      
@@ -338,5 +350,6 @@
 
     <script src="assets/js/pages/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
+
 </body>
 </html>

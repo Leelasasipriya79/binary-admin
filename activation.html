@@ -1,11 +1,11 @@
-  
- <!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-<head>  
-    <meta charset="utf-8">
-    <title> Register User</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+<head>
+  <meta charset="UTF-8">
+  <title> Activate Member</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -19,9 +19,12 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-      <link href="assets/css/vertical.css" rel="stylesheet" >
-    
-      
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
 </head>
@@ -31,7 +34,7 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-      <header id="page-topbar">
+       <header id="page-topbar">
     <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
         
         <!-- Left: Brand -->
@@ -57,7 +60,6 @@
     </div>
 </header>
 
-
   <div class="vertical-menu">
     <div data-simplebar class="h-100">
       <!-- Profile Info with Dropdown -->
@@ -71,7 +73,7 @@
 
  
 
-  
+
 <div id="sidebar-menu">
         <ul id="side-menu">
           <li class="active">
@@ -84,7 +86,7 @@
             <ul class="submenu">
               <li><a href="register-user.html">Register User</a></li>
               <li><a href="view-user.html">View User</a></li>
-           
+             
               <li><a href="activate-member.html">Activate Member</a></li>
               <li><a href="activation-history.html">Activation History</a></li>
               <li><a href="block-user-history.html">Block User History</a></li>
@@ -98,12 +100,13 @@
             <ul class="submenu">
               <li><a href="my-referral.html">My Referral</a></li>
               <li><a href="my-downline.html">My Downline</a></li>
-              <li><a href="binaryTree.html">Genealogy Tree</a></li>
-           
+              <li><a href="binary-tree.html">Genealogy Tree</a></li>
+             
             </ul>
           </li>
 
-           <!-- E-Pin -->
+          <!-- E-Pin -->
+          <!-- E-Pin -->
            <li>
             <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
             <ul class="submenu">
@@ -118,6 +121,7 @@
                <li><a href="withdraw-history.html">Withdraw History</a></li>
             </ul>
           </li>
+
           <!-- KYC -->
           <li>
             <a href="kyc-request.html"><i class="fas fa-id-badge me-2"></i>KYC Requests</a>
@@ -127,7 +131,7 @@
           <li>
             <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
             <ul class="submenu">
-              <li><a href="income-payout.html">Income payout Status</a></li>
+            <li><a href="income-payout.html">Income payout Status</a></li>
             </ul>
           </li>
 
@@ -136,6 +140,7 @@
             <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
             <ul class="submenu">
                <li><a href="matching-income.html">Matching Income</a></li>
+           
             </ul>
           </li>
 
@@ -152,7 +157,7 @@
           <li>
             <a href="#"><i class="fas fa-cogs me-2"></i>Setting <span>&#9662;</span></a>
             <ul class="submenu">
-               <li><a href="notice-setting.html">Notice Setting</a></li>
+             <li><a href="notice-setting.html">Notice Setting</a></li>
             </ul>
           </li>
 
@@ -166,95 +171,61 @@
     </div>
   </div>
   
-      
-<div class="main-content"style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;>
-            
-            
- <div class="page-content">
-  <!-- Header -->
-  <div style="padding: 20px; border-bottom: 1px solid #333; background-color: #111827; color: white;">
-    
-    <!-- Top Line -->
-    <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">
-      Join Member
+
+<div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px; margin-top:60px;">
+  <div class="page-content">
+<div style="max-width: 1100px; margin: auto; background: #fff; color: black; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
+
+    <h2 style="margin-bottom: 30px;">Activation</h2>
+
+    <!-- User ID and Name -->
+    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label style="display: block; margin-bottom: 5px;">User ID *</label>
+        <input type="text" placeholder="e.g. john12345" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+      </div>
+      <div style="flex: 1;">
+        <label style="display: block; margin-bottom: 5px;">Name *</label>
+        <input type="text" placeholder="e.g. John Doe" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: #f0f0f0;" readonly />
+      </div>
     </div>
 
-    <!-- Back Arrow & Title -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h4 style="font-weight: bold; margin: 0;">
-        <i class="fas fa-arrow-left" style="margin-right: 10px; cursor: pointer;" onclick="history.back()"></i> Join Member
-      </h4>
+  <!-- Select Package -->
+<div style="margin-bottom: 20px;">
+  <label style="display: block; margin-bottom: 5px;">Select Package *</label>
+  <select style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <option selected disabled>- Select Package -</option>
+    <option value="1000">₹1000</option>
+    <option value="5000">₹5000</option>
+    <option value="10000">₹10000</option>
+  </select>
+</div>
+
+
+   
+
+    <!-- Admin Remarks and Password -->
+    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label style="display: block; margin-bottom: 5px;">Admin Remarks *</label>
+        <input type="text" placeholder="eg. Payment Advance" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+      </div>
+      <div style="flex: 1;">
+        <label style="display: block; margin-bottom: 5px;">Login Password *</label>
+        <input type="password" placeholder="********" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+      </div>
     </div>
 
-    <!-- Breadcrumb -->
-    <div style="color: rgba(255, 255, 255, 0.5); margin-top: 5px;">
-      <i class="fas fa-home" style="margin-right: 5px; cursor: pointer;" onclick="location.href='index.html'"></i> / Join Member
-    </div>
-  </div>
-
-  <!-- Join Member Form -->
-  <div style="padding: 20px;">
-    <div style="background: white; border-radius: 10px; padding: 30px; color: black;">
-      <h5 style="margin-bottom: 20px;">Join Member</h5>
-      <form id="joinForm">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser's User ID *</label>
-            <input type="text" class="form-control" placeholder="e.g. john12345" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Sponser Name *</label>
-            <input type="text" class="form-control" placeholder="e.g. John Doe" readonly style="width: 100%;">
-          </div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Name *</label>
-            <input type="text" class="form-control" placeholder="Enter Full Name" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Phone *</label>
-            <input type="tel" class="form-control" placeholder="Enter Phone Number" required style="width: 100%;">
-          </div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Password *</label>
-            <input type="password" class="form-control" placeholder="Password *" required style="width: 100%;">
-          </div>
-          <div style="flex: 1;">
-            <label style="font-weight: 500;">Confirm Password *</label>
-            <input type="password" class="form-control" placeholder="Confirm Password *" required style="width: 100%;">
-          </div>
-        </div>
-        <div style="margin-bottom: 20px;">
-          <label style="font-weight: 500;">Select Position *</label>
-          <select class="form-select" required style="width: 100%;">
-            <option selected disabled>- Select Position -</option>
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-          </select>
-        </div>
-        <div style="display: flex; gap: 10px;">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-danger">Reset</button>
-        </div>
-      </form>
+    <!-- Buttons -->
+    <div style="display: flex; gap: 10px;">
+      <button style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Send Pin</button>
+      <button type="reset" style="padding: 10px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
     </div>
   </div>
 </div>
 </div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Optional: JS for validation -->
-<script>
-  document.getElementById("joinForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Form submitted!");
-  });
-</script>
- <!-- JAVASCRIPT -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>      
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
@@ -270,6 +241,13 @@
 
     <script src="assets/js/pages/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
-
+    
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
 </body>
 </html>
