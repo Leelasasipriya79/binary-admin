@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="utf-8">
+    <title>Sm Chitfund - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+</head>
+
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex align-items-center">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box" style="margin-right: auto; padding-left: 15px;">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo.jpg" alt="SM Chitfund" height="70" style="margin-left: -10px;">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo.jpg" alt="SM Chitfund" height="70" style="margin-left: -10px;">
+                            </span>
+                        </a>
+                    </div>
+        
+                    <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="vertical-menu">
+            <div data-simplebar class="h-100">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="fas fa-home me-2"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit-password.html" class="waves-effect">
+                                <i class="fas fa-lock me-2"></i>
+                                <span>Edit Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" class="waves-effect">
+                                <i class="fas fa-user me-2"></i>
+                                <span>User Details</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-user-cog me-2"></i>
+                                <span>User Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="view-member.html">View Member</a></li>
+                                <li><a href="activation-history.html">Activation History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-network-wired me-2"></i>
+                                <span>Agent Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="smc-agent.html">Smc Agent</a></li>
+                                <li><a href="team-executive.html">Team Executive</a></li>
+                                <li><a href="team-senior-executive.html">Team Senior Executive</a></li>
+                                <li><a href="smc-field-officer.html">Smc Field Officer</a></li>
+                                <li><a href="smc-senior-field-officer.html">Smc Senior Field Officer</a></li>
+                                <li><a href="smc-development-officer.html">Smc Development Officer</a></li>
+                                <li><a href="assistant-manager.html">Assistant Manager</a></li>
+                                <li><a href="manager.html">Manager</a></li>
+                                <li><a href="regional-manager.html">Regional Manager</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-money-check-alt me-2"></i>
+                                <span>Chits Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="create-chits.html"> Create Chits</a></li>
+                                <li><a href="chit-amount.html">Chit Amount</a></li>
+                                <li><a href="month.html">Month</a></li>
+                                <li><a href="monthly-investment.html">Monthly Investment</a></li>
+                                <li><a href="auction.html">Bid/Auction</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-university me-2"></i>
+                                <span>Funds Management</span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li><a href="fund-transfer.html">Fund Transfer</a></li>
+                                <li><a href="fund-transfer-history.html">Fund Transfer History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-address-card me-2"></i>
+                                <span>KYC</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="kyc-pending.html">KYC Pending</a></li>
+                                <li><a href="kyc-history.html">KYC History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="qr.html" class="waves-effect">
+                                <i class="fas fa-qrcode me-2"></i>
+                                <span>QR Code</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-bell me-2"></i>
+                                <span>Notification</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="agent-notification.html">Agent Notification</a></li>
+                                <li><a href="user-notification.html">User Notification</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="fas fa-sign-out-alt me-2"></i>
+                                <span>Signout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- Pending KYC Section -->
+                    <h2 class="text-2xl font-bold mb-4 text-black" style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px;">Pending KYC</h2>
+                    
+                    <!-- Search Bar -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Search by ID, Name, or Status...">
+                                <button class="btn btn-primary" type="button" id="searchBtn">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-container" style="overflow-x: auto;">
+                        <table class="table" style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                            <thead>
+                                <tr style="background-color: #d3d3d3; color: #333; font-weight: bold; text-align: left; border-bottom: 2px solid #ddd;">
+                                    <th style="padding: 12px 15px;">ID</th>
+                                    <th class="name-column" style="padding: 12px 15px;">Name</th>
+                                    <th class="status-column" style="padding: 12px 15px;">Status</th>
+                                    <th style="padding: 12px 15px;">Date</th>
+                                    <th style="padding: 12px 15px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kyc-table">
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd;">
+                                    <td style="padding: 12px 15px;">125</td>
+                                    <td class="name-column" style="padding: 12px 15px;">Alice Brown</td>
+                                    <td class="status-pending status-column" style="padding: 12px 15px; color: #f39c12;">Pending</td>
+                                    <td class="date-column" style="padding: 12px 15px;">Apr 29, 2025</td>
+                                    <td style="padding: 12px 15px;">
+                                        <div class="action-buttons" style="display: flex; gap: 10px;">
+                                            <button class="btn-accept" data-id="125" onclick="handleKycAction('125', 'Approved', this)" style="padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Accept</button>
+                                            <button class="btn-reject" data-id="125" onclick="handleKycAction('125', 'Rejected', this)" style="padding: 8px 15px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;">Reject</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd;">
+                                    <td style="padding: 12px 15px;">127</td>
+                                    <td class="name-column" style="padding: 12px 15px;">Charlie Davis</td>
+                                    <td class="status-pending status-column" style="padding: 12px 15px; color: #f39c12;">Pending</td>
+                                    <td class="date-column" style="padding: 12px 15px;">May 02, 2025</td>
+                                    <td style="padding: 12px 15px;">
+                                        <div class="action-buttons" style="display: flex; gap: 10px;">
+                                            <button class="btn-accept" data-id="127" onclick="handleKycAction('127', 'Approved', this)" style="padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Accept</button>
+                                            <button class="btn-reject" data-id="127" onclick="handleKycAction('127', 'Rejected', this)" style="padding: 8px 15px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;">Reject</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+    
+        <!-- Peity chart-->
+        <script src="assets/libs/peity/jquery.peity.min.js"></script>
+    
+        <!-- Plugin Js-->
+        <script src="assets/libs/chartist/chartist.min.js"></script>
+        <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+    
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script>
+            // Mock data for Pending KYC
+            const mockData = [
+                { id: '125', name: 'Alice Brown', status: 'Pending', date: '2025-04-29', actionTaken: false },
+                { id: '127', name: 'Charlie Davis', status: 'Pending', date: '2025-05-02', actionTaken: false },
+            ];
+
+            // Function to format dates as "MMM DD, YYYY"
+            function formatDate(dateStr) {
+                const date = new Date(dateStr);
+                const options = { year: 'numeric', month: 'short', day: '2-digit' };
+                return date.toLocaleDateString('en-US', options).replace(/(\d+),/, '$1,');
+            }
+
+            // Handle KYC Action (Accept/Reject)
+            window.handleKycAction = (id, newStatus, button) => {
+                const entry = mockData.find(item => item.id === id);
+                if (entry && !entry.actionTaken) {
+                    entry.status = newStatus;
+                    entry.actionTaken = true;
+                    // Disable both buttons in the same row
+                    const row = button.closest('tr');
+                    const buttons = row.querySelectorAll('.btn-accept, .btn-reject');
+                    buttons.forEach(btn => btn.disabled = true);
+                    // Update the table
+                    renderKycTable(mockData);
+                }
+            };
+
+            // Render KYC Table
+            function renderKycTable(data = mockData) {
+                const tbody = document.getElementById('kyc-table');
+                tbody.innerHTML = data.map(item => {
+                    // Status color based on value
+                    const statusColor = item.status === 'Pending' ? '#f39c12' : item.status === 'Approved' ? '#28a745' : '#dc3545';
+                    return `
+                        <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px 15px;">${item.id}</td>
+                            <td class="name-column" style="padding: 12px 15px;">${item.name}</td>
+                            <td class="status-column" style="padding: 12px 15px; color: ${statusColor}; font-weight: bold;">${item.status}</td>
+                            <td class="date-column" style="padding: 12px 15px;">${formatDate(item.date)}</td>
+                            <td style="padding: 12px 15px;">
+                                <div class="action-buttons" style="display: flex; gap: 10px;">
+                                    <button class="btn-accept" data-id="${item.id}" onclick="handleKycAction('${item.id}', 'Approved', this)" ${item.actionTaken ? 'disabled' : ''} style="padding: 8px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">Accept</button>
+                                    <button class="btn-reject" data-id="${item.id}" onclick="handleKycAction('${item.id}', 'Rejected', this)" ${item.actionTaken ? 'disabled' : ''} style="padding: 8px 15px; background-color: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;">Reject</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+
+            // Search functionality
+            $('#searchBtn').on('click', function() {
+                const searchTerm = $('#searchInput').val().toLowerCase();
+                const filteredData = mockData.filter(item => 
+                    item.id.toLowerCase().includes(searchTerm) || 
+                    item.name.toLowerCase().includes(searchTerm) || 
+                    item.status.toLowerCase().includes(searchTerm)
+                );
+                renderKycTable(filteredData);
+            });
+
+            // Initial render
+            renderKycTable();
+
+            // Toggle sidebar on mobile
+            $('#vertical-menu-btn').on('click', function() {
+                $('.vertical-menu').toggleClass('active');
+            });
+        </script>
+</body>
+</html>

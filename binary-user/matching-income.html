@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View User</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+ 
+ 
+<link href="assets/css/vertical.css" rel="stylesheet" > 
+ 
+  <!-- Bootstrap (optional but makes it look nicer) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+
+
+</head>
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+      <header id="page-topbar">
+    <div class="navbar-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0 15px;">
+        
+        <!-- Left: Brand -->
+        <div class="d-flex align-items-center">
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo" style="text-decoration: none; color: white; font-size: 24px; font-weight: bold;">
+               SUBHATOM
+                </a>
+            </div>
+
+            <!-- Toggle Button (Mobile only) -->
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect d-block d-md-none" id="vertical-menu-btn">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+
+        <!-- Right: Logout Icon -->
+        <div>
+            <a href="logout.html" title="Logout" style="color: white; font-size: 20px;">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+  <div class="vertical-menu">
+    <div data-simplebar class="h-100">
+      <!-- Profile Info with Dropdown -->
+<div style="background-color: #195233; padding: 16px; color: white; position: relative;">
+  <div style="font-size: 14px;">
+    Hi, <strong>SB111222</strong><br />
+    <span style="font-weight: bold;">Binary Admin</span>
+  </div>
+</div>
+
+
+ 
+
+
+<div id="sidebar-menu">
+      <ul id="side-menu">
+
+        <li class="active">
+          <a href="index.html"><i class="fas fa-tachometer-alt me-2"></i><span>Dashboard</span></a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-users-cog me-2"></i>My Details <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="my-profile.html">My Profile</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-users-cog me-2"></i>User Management <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="register-user.html">Register User</a></li>
+            <li><a href="activate-user.html">Activate User</a></li>
+            <li><a href="activation-history.html">Activation History</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-users me-2"></i>Team <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="my-referral.html">My Referral</a></li>
+            <li><a href="my-downline.html">My Down Team</a></li>
+            <li><a href="binary-tree.html">Genealogy Tree</a></li>
+            <li><a href="carry-details.html">Carry details</a></li>
+            <li><a href="pool-entry.html">Pool Entry</a></li>
+          </ul>
+        </li>
+
+          <li>
+          <a href="#"><i class="fas fa-key me-2"></i>Packages <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="activation.html">Activation</a></li>
+         
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="kyc-history.html"><i class="fas fa-id-badge me-2"></i>KYC History</a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-wallet me-2"></i>Payout <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="income-payout.html">Income payout Status</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-gift me-2"></i>Bonuses <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="matching-income.html">Matching Income</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-wallet me-2"></i>Wallet <span>&#9662;</span></a>
+          <ul class="submenu">
+            <li><a href="wallet-statement.html">Wallet Statement</a></li>
+            <li><a href="wallet-outstanding.html">Wallet Outstanding</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+        </li>
+
+      </ul>  
+      </div>
+    </div>
+  </div>
+
+
+  <!-- DataTables & Buttons CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+
+
+
+  <!-- Container -->
+  
+
+<div class="main-content" style="background-color: #111827; color: white; font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 20px;">
+  <div class="page-content">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2 style="margin: 0;">Matching Income</h2>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div style="color: #9ca3af; margin-bottom: 20px;">
+      <span style="margin-right: 5px;">🏠</span> / <span> Bonus</span> / <strong style="color: white;">Matching Income</strong>
+    </div>
+
+
+<div style="background-color: #ffffff; padding: 20px; border-radius: 10px; color: black;">
+  <table id="referralTable" class="display nowrap" style="width:100%; margin-bottom: 0; color: black;">
+    <thead style="background-color: #e5e7eb; color: black;">
+      <tr>
+        <th>#</th>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Payout</th>
+        <th>Amount</th>
+        <th>Matching Left</th>
+        <th>Matching Right</th>
+        <th>Transaction Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>USR001</td>
+        <td>Amit Sharma</td>
+        <td>2025-06-15</td>
+        <td>₹5,000</td>
+        <td>25</td>
+        <td>30</td>
+        <td>10:23 AM</td>
+        <td style="color: green;">Paid</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>USR002</td>
+        <td>Priya Verma</td>
+        <td>2025-06-16</td>
+        <td>₹7,500</td>
+        <td>40</td>
+        <td>38</td>
+        <td>2:45 PM</td>
+        <td style="color: orange;">Pending</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>USR003</td>
+        <td>Rohan Das</td>
+        <td>2025-06-17</td>
+        <td>₹6,000</td>
+        <td>32</td>
+        <td>34</td>
+        <td>4:10 PM</td>
+        <td style="color: red;">Failed</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    <script src="assets/libs/jquery/jquery.min.js"></script>      
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Peity chart-->
+    <script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+    <!-- Plugin Js-->
+    <script src="assets/libs/chartist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/app.js"></script>
+<!-- JS + DataTables -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#referralTable').DataTable({
+      dom: '<"top"Bl><"top2"f>rt<"bottom"ip>',
+      buttons: ['copy', 'csv', 'excel', 'print'],
+      paging: true,
+      info: true,
+      responsive: true
+    });
+
+    setTimeout(() => {
+      // Style buttons
+      $('.dt-button').attr('style',
+        'background-color:#e5e7eb;color:#111827;border:1px solid #d1d5db;padding:6px 12px;font-size:14px;border-radius:4px;margin-right:5px;cursor:pointer;margin-bottom:10px;'
+      );
+
+      // Style pagination
+      $('.dataTables_paginate .paginate_button').attr('style',
+        'background-color:#e5e7eb;color:#111827;border:1px solid #d1d5db;border-radius:4px;padding:5px 10px;margin:2px;'
+      );
+
+      // Style info and length dropdown
+      $('.dataTables_info, .dataTables_length label').attr('style', 'color:black;margin:10px 0;');
+      $('select[name="referralTable_length"]').attr('style',
+        'background:#e5e7eb;color:#111827;border-radius:4px;padding:4px;border:1px solid #d1d5db;'
+      );
+
+      // Optional: spacing between buttons and dropdown
+      $('.top').css('margin-bottom', '5px');
+      $('.top2').css('margin-bottom', '10px');
+    }, 200);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>  
+    <meta charset="utf-8">
+    <title> Sm Chitfund- Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+</head>
+
+<body data-sidebar>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex align-items-center">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box" style="margin-right: auto; padding-left: 15px;">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo.jpg" alt="SM Chitfund" height="70" style="margin-left: -10px;">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo.jpg" alt="SM Chitfund" height="70" style="margin-left: -10px;">
+                            </span>
+                        </a>
+                    </div>
+        
+                    <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="vertical-menu">
+            <div data-simplebar class="h-100">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="fas fa-home me-2"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit-password.html" class="waves-effect">
+                                <i class="fas fa-lock me-2"></i>
+                                <span>Edit Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="user.html" class="waves-effect">
+                                <i class="fas fa-user me-2"></i>
+                                <span>User Details</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-user-cog me-2"></i>
+                                <span>User Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="view-member.html">View Member</a></li>
+                                <li><a href="activation-history.html">Activation History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-network-wired me-2"></i>
+                                <span>Agent Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="smc-agent.html">Smc Agent</a></li>
+                                <li><a href="team-executive.html">Team Executive</a></li>
+                                <li><a href="team-senior-executive.html">Team Senior Executive</a></li>
+                                <li><a href="smc-field-officer.html">Smc Field Officer</a></li>
+                                <li><a href="smc-senior-field-officer.html">Smc Senior Field Officer</a></li>
+                                <li><a href="smc-development-officer.html">Smc Development Officer</a></li>
+                                <li><a href="assistant-manager.html">Assistant Manager</a></li>
+                                <li><a href="manager.html">Manager</a></li>
+                                <li><a href="regional-manager.html">Regional Manager</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-money-check-alt me-2"></i>
+                                <span>Chits Management</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="create-chits.html"> Create Chits</a></li>
+                                <li><a href="chit-amount.html">Chit Amount</a></li>
+                                <li><a href="month.html">Month</a></li>
+                                <li><a href="monthly-investment.html">Monthly Investment</a></li>
+                                <li><a href="auction.html">Bid/Auction</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-university me-2"></i>
+                                <span>Funds Management</span>
+                            </a>
+                            <ul class="submenu">
+                             
+                                <li><a href="fund-transfer.html">Fund Transfer</a></li>
+                                <li><a href="fund-transfer-history.html">Fund Transfer History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-address-card me-2"></i>
+                                <span>KYC</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="kyc-pending.html">KYC Pending</a></li>
+                                <li><a href="kyc-history.html">KYC History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="qr.html" class="waves-effect">
+                                <i class="fas fa-qrcode me-2"></i>
+                                <span>QR Code</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="has-arrow waves-effect">
+                                <i class="fas fa-bell me-2"></i>
+                                <span>Notification</span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="kyc-pending.html">Agent Notification</a></li>
+                                <li><a href="kyc-history.html">User Notification</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="fas fa-sign-out-alt me-2"></i>
+                                <span>Signout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+        
+                    <!-- start page title -->
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h6 class="page-title" style="color: #4a4a4a;">User Details</h6>
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">User Details</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+        
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <!-- Search bar and export button at the top of the table -->
+                                    <div style="margin-bottom: 15px; display: flex; justify-content: flex-end; align-items: center;">
+                                        <input type="text" id="searchBar" class="form-control" placeholder="Search..." style="width: 250px; margin-right: 15px;">
+                                        <button id="exportBtn" class="btn btn-primary" style="display: flex; align-items: center;">
+                                            <i class="fas fa-file-export me-2"></i> Export to Excel
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Scrollable container with inline styles -->
+                                    <div style="overflow-x: auto; position: relative; padding-bottom: 10px;">
+                                    
+                                        <!-- Scroll hint arrows -->
+                                        <div style="position: absolute; top: 10px; right: 10px; left: 10px; display: flex; justify-content: space-between; pointer-events: none; z-index: 1;">
+                                            <i class="fas fa-angle-double-left" style="font-size: 16px; color: #999; opacity: 0.6;"></i>
+                                            <i class="fas fa-angle-double-right" style="font-size: 16px; color: #999; opacity: 0.6;"></i>
+                                        </div>
+                                    
+                                        <table id="datatable" class="table table-bordered" style="width: 100%; white-space: nowrap; border-collapse: collapse; font-family: Arial, sans-serif; border: 1px solid #ddd;">
+                                            <thead>
+                                                <tr style="background-color: #808080; color: #ffffff; font-weight: bold;">
+                                                    <th style="padding: 12px 15px; text-align: left;">SI.No</th>
+                                                    <th style="padding: 12px 15px; text-align: left;">User Id</th>
+                                                    <th style="padding: 12px 15px; text-align: left;">Name</th>
+                                                    <th style="padding: 12px 15px; text-align: left;">Mobile No</th>
+                                                    <th style="padding: 12px 15px; text-align: left;">Email</th>
+                                                    <th style="padding: 12px 15px; text-align: left;">Monthly Investment</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="background-color: #f9f9f9;">
+                                                    <td style="padding: 12px 15px;">1</td>
+                                                    <td style="padding: 12px 15px;">USR1001</td>
+                                                    <td style="padding: 12px 15px;">Amit Sharma</td>
+                                                    <td style="padding: 12px 15px;">9876543210</td>
+                                                    <td style="padding: 12px 15px;">amit.sharma@example.com</td>
+                                                    <td style="padding: 12px 15px;">₹5,000</td>
+                                                </tr>
+                                                <tr style="background-color: #f9f9f9;">
+                                                    <td style="padding: 12px 15px;">2</td>
+                                                    <td style="padding: 12px 15px;">USR1002</td>
+                                                    <td style="padding: 12px 15px;">Priya Verma</td>
+                                                    <td style="padding: 12px 15px;">9123456780</td>
+                                                    <td style="padding: 12px 15px;">priya.verma@example.com</td>
+                                                    <td style="padding: 12px 15px;">₹3,500</td>
+                                                </tr>
+                                                <tr style="background-color: #f9f9f9;">
+                                                    <td style="padding: 12px 15px;">3</td>
+                                                    <td style="padding: 12px 15px;">USR1003</td>
+                                                    <td style="padding: 12px 15px;">Ravi Kumar</td>
+                                                    <td style="padding: 12px 15px;">9988776655</td>
+                                                    <td style="padding: 12px 15px;">ravi.kumar@example.com</td>
+                                                    <td style="padding: 12px 15px;">₹6,000</td>
+                                                </tr>
+                                                <tr style="background-color: #f9f9f9;">
+                                                    <td style="padding: 12px 15px;">4</td>
+                                                    <td style="padding: 12px 15px;">USR1004</td>
+                                                    <td style="padding: 12px 15px;">Neha Joshi</td>
+                                                    <td style="padding: 12px 15px;">9090909090</td>
+                                                    <td style="padding: 12px 15px;">neha.joshi@example.com</td>
+                                                    <td style="padding: 12px 15px;">₹4,000</td>
+                                                </tr>
+                                                <tr style="background-color: #f9f9f9;">
+                                                    <td style="padding: 12px 15px;">5</td>
+                                                    <td style="padding: 12px 15px;">USR1005</td>
+                                                    <td style="padding: 12px 15px;">Sachin Mehra</td>
+                                                    <td style="padding: 12px 15px;">9012345678</td>
+                                                    <td style="padding: 12px 15px;">sachin.mehra@example.com</td>
+                                                    <td style="padding: 12px 15px;">₹5,500</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+        
+                </div> <!-- container-fluid -->
+            </div>  
+        </div>
+        
+        <script>
+            // Search functionality for the table
+            document.getElementById("searchBar").addEventListener("keyup", function() {
+                let filter = this.value.toUpperCase();
+                let rows = document.querySelectorAll("#datatable tbody tr");
+        
+                rows.forEach(row => {
+                    let cells = row.getElementsByTagName("td");
+                    let found = false;
+        
+                    // Loop through all cells in the row
+                    for (let i = 0; i < cells.length; i++) {
+                        if (cells[i].textContent.toUpperCase().includes(filter)) {
+                            found = true;
+                            break;
+                        }
+                    }
+        
+                    if (found) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            });
+
+            // Export to Excel functionality
+            document.getElementById("exportBtn").addEventListener("click", function() {
+                let table = document.getElementById("datatable");
+                let rows = table.querySelectorAll("tr");
+                let csv = [];
+
+                // Collect header
+                let header = [];
+                table.querySelectorAll("thead th").forEach(th => {
+                    header.push('"' + th.textContent.replace(/"/g, '""') + '"');
+                });
+                csv.push(header.join(","));
+
+                // Collect visible rows
+                rows.forEach(row => {
+                    if (row.style.display !== "none" && row.parentNode.tagName === "TBODY") {
+                        let rowData = [];
+                        row.querySelectorAll("td").forEach(cell => {
+                            rowData.push('"' + cell.textContent.replace(/"/g, '""') + '"');
+                        });
+                        csv.push(rowData.join(","));
+                    }
+                });
+
+                // Create CSV file
+                let csvContent = csv.join("\n");
+                let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+                let link = document.createElement("a");
+                let url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", "user_details.csv");
+                link.style.visibility = "hidden";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        </script>
+        
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+    
+        <!-- Peity chart-->
+        <script src="assets/libs/peity/jquery.peity.min.js"></script>
+    
+        <!-- Plugin Js-->
+        <script src="assets/libs/chartist/chartist.min.js"></script>
+        <script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+    
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+</body>
+</html>
